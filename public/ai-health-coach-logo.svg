@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f7bff"/>
+      <stop offset="1" stop-color="#1e63f2"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="256" height="256" rx="56" fill="url(#g)"/>
+  <circle cx="92" cy="102" r="18" fill="rgba(255,255,255,0.9)"/>
+  <circle cx="164" cy="102" r="18" fill="rgba(255,255,255,0.9)"/>
+  <path d="M72 150c16 22 40 34 56 34s40-12 56-34" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="14" stroke-linecap="round"/>
+  <text x="128" y="230" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="22" font-weight="800" fill="rgba(255,255,255,0.92)">
+    AI Health Coach
+  </text>
+</svg>

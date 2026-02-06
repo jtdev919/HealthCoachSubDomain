@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'AI Health Coach App | Teknical Solutionz';
+const description = 'AI Health Coach App—wearable integrations, unified health data, and AI-suggested workout plans with ongoing analysis.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <div class="grid cols-2" style="align-items:start;">
+        <div>
+          <h1 style="margin:0 0 10px; font-size: 44px;">AI Health Coach App</h1>
+          <p class="sub">
+            AI Health Coach App is a modern mobile application designed to unify health and fitness data from wearables,
+            manual tracking, and cloud services into a single experience. The app brings workouts, sleep, biometrics, and
+            nutrition signals together in one place, then applies AI-driven analysis to generate personalized insights
+            and suggested workout plans—helping users train smarter, recover better, and stay consistent.
+          </p>
+
+          <div class="pills">
+            <span class="pill">iOS / Android</span>
+            <span class="pill">Wearables</span>
+            <span class="pill">All data in one place</span>
+            <span class="pill">AI insights</span>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+            <!-- Replace with your real store links when ready -->
+            <a class="btn primary" href="#" aria-label="App Store link (add later)">App Store (add link)</a>
+            <a class="btn" href="#" aria-label="Google Play link (add later)">Google Play (add link)</a>
+          </div>
+
+          <div class="hr"></div>
+
+          <h2 style="margin: 0 0 10px;">What it does</h2>
+          <div class="grid">
+            <div class="feature">
+              <h3>Wearable integrations</h3>
+              <p>
+                Connect popular fitness trackers and health platforms to automatically ingest activity, sleep,
+                and biometric data.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>All your data in one place</h3>
+              <p>
+                Unify workouts, nutrition, body metrics, and wearable data into a single, coherent health timeline.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>AI-suggested workout plans</h3>
+              <p>
+                Generate adaptive workout plans based on goals, recent performance, recovery signals, and consistency.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Ongoing analysis & insights</h3>
+              <p>
+                AI-driven analysis highlights trends, strengths, and areas for improvement over time—without overwhelming the user.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <div style="display:flex; align-items:center; gap:14px;">
+            <img src="/ai-health-coach-logo.png" alt="AI Health Coach App logo" style="width:72px; height:72px; border-radius:18px; border:1px solid rgba(255,255,255,0.14);" />
+            <div>
+              <div style="font-weight:900; font-size:16px;">AI Health Coach App</div>
+              <div class="small">Mobile product • Built by Teknical Solutionz</div>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <div class="grid">
+            <div class="feature">
+              <h3>Built for real-world delivery</h3>
+              <p>Clean architecture, secure data handling, and integration patterns that scale.</p>
+            </div>
+            <div class="feature">
+              <h3>Designed for iteration</h3>
+              <p>Built to evolve: new data sources, coaching logic, and features can expand safely.</p>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <p class="small" style="margin:0;">
+            Want a similar mobile product built? We can help with architecture, delivery, and app store readiness.
+          </p>
+          <div style="margin-top: 12px;">
+            <a class="btn primary" href="/contact">Talk to us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

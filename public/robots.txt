@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://teknicalsolutionz.com/sitemap.xml

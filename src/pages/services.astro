@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Services | Teknical Solutionz';
+const description = 'Architecture design services, modernization, cloud migrations, and mobile app development.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin:0 0 10px; font-size: 44px;">Services</h1>
+      <p class="sub">
+        Engagements are sized to your goals: a quick assessment, a blueprint + roadmap, or hands-on delivery support.
+      </p>
+
+      <div class="grid cols-2">
+        <div class="card pad">
+          <h2 style="margin-top:0;">Architecture design services</h2>
+          <p class="small">
+            Make the hard calls early: boundaries, integration patterns, data flow, and operational concerns.
+          </p>
+          <div class="pills">
+            <span class="pill">Reference architecture</span>
+            <span class="pill">Integration patterns</span>
+            <span class="pill">Security guardrails</span>
+            <span class="pill">Observability</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0;">Modernization</h2>
+          <p class="small">
+            Reduce risk by modernizing in increments—stabilize, simplify, and upgrade with clear milestones.
+          </p>
+          <div class="pills">
+            <span class="pill">Legacy assessment</span>
+            <span class="pill">Decomposition</span>
+            <span class="pill">Platform upgrades</span>
+            <span class="pill">CI/CD alignment</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0;">Cloud migrations</h2>
+          <p class="small">
+            Move with intent: cost, performance, security, and reliability. No “lift and pray.”
+          </p>
+          <div class="pills">
+            <span class="pill">Re-platform</span>
+            <span class="pill">Re-architect</span>
+            <span class="pill">Landing zone</span>
+            <span class="pill">Cost controls</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0;">Mobile app development</h2>
+          <p class="small">
+            Cross-platform apps with clean UX, reliable backends, and maintainable delivery pipelines.
+          </p>
+          <div class="pills">
+            <span class="pill">iOS / Android</span>
+            <span class="pill">API integration</span>
+            <span class="pill">Offline-first</span>
+            <span class="pill">App store readiness</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="padding-top: 26px;">
+        <div class="card pad">
+          <h2 style="margin-top:0;">How engagements usually start</h2>
+          <div class="grid cols-3">
+            <div class="feature">
+              <h3>Discovery</h3>
+              <p>Current state, constraints, risks, and quick wins.</p>
+            </div>
+            <div class="feature">
+              <h3>Blueprint</h3>
+              <p>Target architecture + prioritized roadmap.</p>
+            </div>
+            <div class="feature">
+              <h3>Delivery</h3>
+              <p>Implementation support and measurable outcomes.</p>
+            </div>
+          </div>
+          <div style="margin-top: 14px;">
+            <a class="btn primary" href="/contact">Request a consult</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Contact | Teknical Solutionz';
+const description = 'Contact Teknical Solutionz for architecture, modernization, cloud, and mobile consulting.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin:0 0 10px; font-size: 44px;">Contact</h1>
+      <p class="sub">
+        Start with a short note about your goals. You’ll get a clear next step.
+      </p>
+
+      <div class="grid cols-2">
+        <div class="card pad">
+          <h2 style="margin-top:0;">Send a message</h2>
+
+          <!-- Replace the action URL with your Formspree endpoint -->
+          <form action="https://formspree.io/f/xxxxxx" method="POST" class="grid">
+            <input type="hidden" name="subject" value="New inquiry from teknicalsolutionz.com" />
+
+            <div>
+              <label class="small">Name</label><br/>
+              <input required name="name" class="input" />
+            </div>
+
+            <div>
+              <label class="small">Email</label><br/>
+              <input required type="email" name="email" class="input" />
+            </div>
+
+            <div>
+              <label class="small">Company</label><br/>
+              <input name="company" class="input" />
+            </div>
+
+            <div>
+              <label class="small">How can we help?</label><br/>
+              <textarea required name="message" rows="4" class="input"></textarea>
+            </div>
+
+            <button class="btn primary" type="submit">Send message</button>
+          </form>
+
+          <p class="small" style="margin-top:10px;">
+            Or contact us directly:<br/>
+            <a href="mailto:contact@teknicalsolutionz.com">contact@teknicalsolutionz.com</a><br/>
+            <a href="tel:12487969207">(248) 796-9207</a>
+          </p>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0;">What to include</h2>
+          <div class="grid">
+            <div class="feature">
+              <h3>Your objective</h3>
+              <p>What you want to modernize, migrate, or build.</p>
+            </div>
+            <div class="feature">
+              <h3>Timeline</h3>
+              <p>Decision points or delivery deadlines.</p>
+            </div>
+            <div class="feature">
+              <h3>Constraints</h3>
+              <p>Budget, compliance, platforms, or team considerations.</p>
+            </div>
+          </div>
+
+          <div class="pills">
+            <span class="pill">New Baltimore, MI</span>
+            <span class="pill">Remote engagements</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

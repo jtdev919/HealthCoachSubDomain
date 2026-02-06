@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+const {
+  title = 'Teknical Solutionz',
+  description = 'Architecture, modernization, cloud migrations, and mobile app development in New Baltimore, MI.',
+  ogImage = '/og.svg'
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b1220" />
+    <link rel="canonical" href={canonical} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+  </head>
+  <body>
+    <div class="nav">
+      <div class="container">
+        <Nav />
+      </div>
+    </div>
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

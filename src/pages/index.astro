@@ -1,0 +1,145 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Teknical Solutionz | Architecture, Modernization & Cloud Migrations';
+const description = 'Teknical Solutionz helps organizations design scalable architectures, modernize legacy systems, migrate to cloud, and deliver mobile apps—based in New Baltimore, MI.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">
+            <span aria-hidden="true">●</span>
+            Architecture-first consulting • New Baltimore, MI
+          </div>
+          <img src="/teknical-solutionz-logo.png" alt="Teknical Solutionz logo" style="max-width:320px;margin:18px 0 10px 0;" />
+          <h1>Modernize with a plan. Ship with confidence.</h1>
+          <p class="lead">
+            Teknical Solutionz provides architecture design, modernization, cloud migrations, and mobile app development.
+            Clear decisions, pragmatic execution, and outcomes you can measure.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
+            <a class="btn primary" href="/contact">Request a consult</a>
+            <a class="btn" href="/services">View services</a>
+          </div>
+          <div class="pills">
+            <span class="pill">Architecture design</span>
+            <span class="pill">Modernization</span>
+            <span class="pill">Cloud migrations</span>
+            <span class="pill">Mobile apps</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <div style="font-weight:800; font-size:16px; margin-bottom:10px;">Fast engagement, clear deliverables</div>
+          <div class="small" style="margin-bottom: 14px;">
+            Typical first step: a focused discovery that produces an architecture blueprint and a prioritized delivery plan.
+          </div>
+
+          <div class="grid" style="gap: 10px;">
+            <div class="feature">
+              <h3>1. Discover</h3>
+              <p>Current-state, constraints, risks, and quick wins.</p>
+            </div>
+            <div class="feature">
+              <h3>2. Design</h3>
+              <p>Target architecture, integration patterns, and roadmap.</p>
+            </div>
+            <div class="feature">
+              <h3>3. Deliver</h3>
+              <p>Implementation support and measurable outcomes.</p>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px;">
+            <a class="btn" href="/work">See outcomes</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Services</h2>
+      <p class="sub">Focused offerings that move you from “stuck” to “shipped.”</p>
+
+      <div class="grid cols-3">
+        <div class="feature">
+          <h3>Architecture design</h3>
+          <p>Reference architectures, integration patterns, and guardrails for scale and reliability.</p>
+        </div>
+        <div class="feature">
+          <h3>Modernization</h3>
+          <p>Legacy assessments, incremental refactors, and pragmatic platform upgrades.</p>
+        </div>
+        <div class="feature">
+          <h3>Cloud migrations</h3>
+          <p>Lift & reshape, re-platform, or re-architect—aligned to cost, security, and performance.</p>
+        </div>
+        <div class="feature">
+          <h3>Mobile app development</h3>
+          <p>Cross-platform delivery with clean UX, backend integration, and maintainable code.</p>
+        </div>
+        <div class="feature">
+          <h3>Delivery planning</h3>
+          <p>Roadmaps, milestones, and sequencing that reduce risk and avoid rework.</p>
+        </div>
+        <div class="feature">
+          <h3>Technical leadership</h3>
+          <p>Hands-on guidance for teams—standards, reviews, and enablement.</p>
+        </div>
+      </div>
+
+      <div style="margin-top: 18px;">
+        <a class="btn primary" href="/services">Explore services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="card pad">
+        <div class="grid cols-2">
+          <div>
+            <h2 style="margin-top:0;">Ready to talk?</h2>
+            <p class="sub" style="margin-bottom: 0;">
+              Share what you’re trying to accomplish. You’ll get a clear next step and a realistic plan.
+            </p>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
+            <a class="btn primary" href="/contact">Request a consult</a>
+            <a class="btn" href="tel:12487969207">Call: (248) 796-9207</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section">
+  <div class="container">
+    <div class="card pad">
+      <div class="grid cols-2">
+        <div>
+          <h2 style="margin-top:0;">Featured product: AI Health Coach App</h2>
+          <p class="sub" style="margin-bottom:0;">
+            Wearable integrations, unified health data, and AI-suggested workout plans with ongoing analysis.
+          </p>
+          <div class="pills">
+            <span class="pill">Wearables</span>
+            <span class="pill">AI plans</span>
+            <span class="pill">Insights</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
+          <a class="btn primary" href="/ai-health-coach">View the app</a>
+          <a class="btn" href="/contact">Build something similar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>

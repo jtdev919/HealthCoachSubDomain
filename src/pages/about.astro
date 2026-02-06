@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'About | Teknical Solutionz';
+const description = 'Architecture-first consulting based in New Baltimore, MI.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1 style="margin:0 0 10px; font-size: 44px;">About</h1>
+      <p class="sub">
+        Teknical Solutionz is an architecture-first consulting practice based in New Baltimore, MI.
+        The focus is simple: reduce risk, clarify decisions, and ship reliable systems.
+      </p>
+
+      <div class="grid cols-2">
+        <div class="card pad">
+          <h2 style="margin-top:0;">What we do</h2>
+          <p class="small">
+            We help organizations modernize platforms and applications, migrate to cloud, and build mobile experiences.
+            The work is grounded in practical architecture and delivery discipline.
+          </p>
+          <div class="pills">
+            <span class="pill">Pragmatic design</span>
+            <span class="pill">Clear roadmaps</span>
+            <span class="pill">Measured outcomes</span>
+          </div>
+        </div>
+
+        <div class="card pad">
+          <h2 style="margin-top:0;">How we work</h2>
+          <div class="grid">
+            <div class="feature">
+              <h3>Clarity over complexity</h3>
+              <p>Decisions documented, tradeoffs explicit, and teams aligned.</p>
+            </div>
+            <div class="feature">
+              <h3>Incremental modernization</h3>
+              <p>Deliver value early and avoid “big bang” risk.</p>
+            </div>
+            <div class="feature">
+              <h3>Security and reliability</h3>
+              <p>Built-in, not bolted on—patterns that hold up under load.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" style="padding-top: 26px;">
+        <div class="card pad">
+          <h2 style="margin-top:0;">Based in Michigan, remote-friendly</h2>
+          <p class="small" style="margin:0;">
+            Located in New Baltimore, MI. Available for local engagements and remote projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
