@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Data Deletion | Teknical Solutionz';
+const description = 'How to delete your AI Health Coach App data, including the in-app Delete All Data option.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container" style="max-width: 920px;">
+      <h1>Data Deletion</h1>
+      <p class="sub">
+        Teknical Solutionz provides users with clear options to delete their data from the AI Health Coach App.
+      </p>
+
+      <div class="card pad" style="margin-top: 16px;">
+        <h2 style="margin-top:0;">Option 1: Delete within the app (recommended)</h2>
+        <p>
+          Open the AI Health Coach App and navigate to <strong>Settings</strong>.
+          Use the <strong>Delete All Data</strong> button to permanently delete your stored App data.
+        </p>
+        <p class="small">
+          This action is intended to remove your stored App data. If you have connected wearable platforms, you can also revoke access
+          from the provider’s connection settings to prevent future sync.
+        </p>
+      </div>
+
+      <div class="card pad" style="margin-top: 14px;">
+        <h2 style="margin-top:0;">Option 2: Request deletion by email</h2>
+        <p>
+          If you prefer, email us from the address associated with your account and request deletion:
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:joseph.toland@teknicalsolutionz.com">joseph.toland@teknicalsolutionz.com</a><br/>
+          <strong>Subject:</strong> Data Deletion Request
+        </p>
+        <p>
+          Please include the email associated with your account and a brief confirmation that you want your data deleted.
+        </p>
+      </div>
+
+      <h2>Processing time</h2>
+      <p>
+        We typically confirm deletion completion by email. Deletion requests are processed within 30 days.
+        Backup data, if applicable, is securely purged during normal retention cycles.
+      </p>
+
+      <p style="margin-top:18px;">
+        <a class="btn" href="/privacy">View Privacy Policy</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

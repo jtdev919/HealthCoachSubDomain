@@ -1,8 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'Teknical Solutionz | Architecture, Modernization & Cloud Migrations';
-const description = 'Teknical Solutionz helps organizations design scalable architectures, modernize legacy systems, migrate to cloud, and deliver mobile apps—based in New Baltimore, MI.';
+const title = 'AI Health Coach App | Wearables + AI Training Guidance';
+const description = 'AI Health Coach App unifies wearable data (including Garmin Connect), sleep, recovery, and training signals to generate AI-suggested workout plans and ongoing analysis.';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -12,49 +12,55 @@ const description = 'Teknical Solutionz helps organizations design scalable arch
         <div>
           <div class="kicker">
             <span aria-hidden="true">●</span>
-            Architecture-first consulting • New Baltimore, MI
+            Wearables + AI training guidance • Built by Teknical Solutionz
           </div>
-          <img src="/teknical-solutionz-logo.png" alt="Teknical Solutionz logo" style="max-width:320px;margin:18px 0 10px 0;" />
-          <h1>Modernize with a plan. Ship with confidence.</h1>
+          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:18px 0 10px 0;">
+  <img src="/healthcoachapp-icon.png" class="app-hero-icon" alt="AI Health Coach App logo" style="height:72px; display:block;" />
+  <div>
+    <div style="font-weight:900; font-size:28px; line-height:1.1;">AI Health Coach App</div>
+    <div class="small" style="margin-top:4px;">by Teknical Solutionz</div>
+  </div>
+</div>
+          <h1>Your health data, in one place — with AI suggested plans.</h1>
           <p class="lead">
-            Teknical Solutionz provides architecture design, modernization, cloud migrations, and mobile app development.
-            Clear decisions, pragmatic execution, and outcomes you can measure.
+            Connect your wearables, unify your health signals, and get AI-suggested workout plans with ongoing analysis.
+            Built for real-world training: sleep, recovery, stress, and readiness — all in one spot.
           </p>
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
-            <a class="btn primary" href="/contact">Request a consult</a>
-            <a class="btn" href="/services">View services</a>
+            <a class="btn primary" href="/garmin">Garmin integration details</a>
+            <a class="btn" href="/contact">Request access / demo</a>
           </div>
           <div class="pills">
-            <span class="pill">Architecture design</span>
-            <span class="pill">Modernization</span>
-            <span class="pill">Cloud migrations</span>
-            <span class="pill">Mobile apps</span>
+            <span class="pill">Garmin Connect</span>
+            <span class="pill">Oura</span>
+            <span class="pill">Apple Health</span>
+            <span class="pill">AI insights</span>
           </div>
         </div>
 
         <div class="card pad">
-          <div style="font-weight:800; font-size:16px; margin-bottom:10px;">Fast engagement, clear deliverables</div>
+          <div style="font-weight:800; font-size:16px; margin-bottom:10px;">How Garmin data is used</div>
           <div class="small" style="margin-bottom: 14px;">
-            Typical first step: a focused discovery that produces an architecture blueprint and a prioritized delivery plan.
+            Users explicitly connect Garmin Connect to sync activity, sleep, and training signals. We use that data to generate personalized, AI-assisted insights and suggested workout plans. Users can disconnect at any time.
           </div>
 
           <div class="grid" style="gap: 10px;">
             <div class="feature">
-              <h3>1. Discover</h3>
-              <p>Current-state, constraints, risks, and quick wins.</p>
+              <h3>1. Connect</h3>
+              <p>Authorize Garmin Connect (OAuth) and select what to share.</p>
             </div>
             <div class="feature">
-              <h3>2. Design</h3>
-              <p>Target architecture, integration patterns, and roadmap.</p>
+              <h3>2. Analyze</h3>
+              <p>Normalize metrics (sleep, HRV, load) and detect trends.</p>
             </div>
             <div class="feature">
-              <h3>3. Deliver</h3>
-              <p>Implementation support and measurable outcomes.</p>
+              <h3>3. Recommend</h3>
+              <p>Generate AI-guided workouts, recovery guidance, and explanations.</p>
             </div>
           </div>
 
           <div style="margin-top: 14px;">
-            <a class="btn" href="/work">See outcomes</a>
+            <a class="btn" href="/garmin">Garmin integration details</a>
           </div>
         </div>
       </div>
@@ -63,83 +69,43 @@ const description = 'Teknical Solutionz helps organizations design scalable arch
 
   <section class="section">
     <div class="container">
-      <h2>Services</h2>
-      <p class="sub">Focused offerings that move you from “stuck” to “shipped.”</p>
+      <h2>Key features</h2>
+      <p class="sub">A dedicated consumer app that turns wearable signals into actionable training guidance.</p>
 
       <div class="grid cols-3">
-        <div class="feature">
-          <h3>Architecture design</h3>
-          <p>Reference architectures, integration patterns, and guardrails for scale and reliability.</p>
-        </div>
-        <div class="feature">
-          <h3>Modernization</h3>
-          <p>Legacy assessments, incremental refactors, and pragmatic platform upgrades.</p>
-        </div>
-        <div class="feature">
-          <h3>Cloud migrations</h3>
-          <p>Lift & reshape, re-platform, or re-architect—aligned to cost, security, and performance.</p>
-        </div>
-        <div class="feature">
-          <h3>Mobile app development</h3>
-          <p>Cross-platform delivery with clean UX, backend integration, and maintainable code.</p>
-        </div>
-        <div class="feature">
-          <h3>Delivery planning</h3>
-          <p>Roadmaps, milestones, and sequencing that reduce risk and avoid rework.</p>
-        </div>
-        <div class="feature">
-          <h3>Technical leadership</h3>
-          <p>Hands-on guidance for teams—standards, reviews, and enablement.</p>
-        </div>
-      </div>
+  <div class="feature"><h3>Wearable integrations</h3><p>Connect Garmin Connect, Oura, and Apple Health (with permission) to sync sleep, readiness, activity, and training signals.</p></div>
+  <div class="feature"><h3>All your data in one spot</h3><p>Unified timeline and trends across sleep, recovery, training load, and behavior.</p></div>
+  <div class="feature"><h3>AI-suggested workout plans</h3><p>Personalized guidance based on recent recovery and training signals, with “why” explanations.</p></div>
+  <div class="feature"><h3>Ongoing analysis</h3><p>Trend detection, weekly summaries, and flags when recovery or load drifts out of range.</p></div>
+  <div class="feature"><h3>Privacy controls</h3><p>Users control what they connect and can revoke access any time. In-app “Delete All Data” is supported.</p></div>
+  <div class="feature"><h3>Export & sharing</h3><p>Export key metrics and summaries for discussion with a coach or clinician (where supported).</p></div>
+</div>
 
-      <div style="margin-top: 18px;">
-        <a class="btn primary" href="/services">Explore services</a>
+<div style="margin-top: 18px;">
+        <a class="btn primary" href="/garmin">How data is used</a>
       </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <div class="card pad">
-        <div class="grid cols-2">
-          <div>
-            <h2 style="margin-top:0;">Ready to talk?</h2>
-            <p class="sub" style="margin-bottom: 0;">
-              Share what you’re trying to accomplish. You’ll get a clear next step and a realistic plan.
-            </p>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
-            <a class="btn primary" href="/contact">Request a consult</a>
-            <a class="btn" href="tel:12487969207">Call: (248) 796-9207</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="section">
   <div class="container">
     <div class="card pad">
       <div class="grid cols-2">
         <div>
-          <h2 style="margin-top:0;">Featured product: AI Health Coach App</h2>
-          <p class="sub" style="margin-bottom:0;">
-            Wearable integrations, unified health data, and AI-suggested workout plans with ongoing analysis.
-          </p>
+          <h2 style="margin-top:0;">Compliance links</h2>
+          <p class="sub" style="margin-bottom:0;">Required policies for wearable API programs are publicly accessible:</p>
           <div class="pills">
-            <span class="pill">Wearables</span>
-            <span class="pill">AI plans</span>
-            <span class="pill">Insights</span>
+            <a class="pill" href="/privacy">Privacy Policy</a>
+            <a class="pill" href="/data-deletion">Data Deletion</a>
+            <a class="pill" href="/terms">Terms of Use</a>
           </div>
         </div>
         <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
-          <a class="btn primary" href="/ai-health-coach">View the app</a>
-          <a class="btn" href="/contact">Build something similar</a>
+          <a class="btn primary" href="/garmin">Garmin integration details</a>
+          <a class="btn" href="/contact">Contact</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 </BaseLayout>
