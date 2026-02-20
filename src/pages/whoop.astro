@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'WHOOP Integration | AI Health Coach App';
+const description = 'How AI Health Coach App uses WHOOP data with user consent.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <h1>WHOOP Integration</h1>
+      <p class="sub">
+        This page explains how AI Health Coach App uses WHOOP data, with explicit user authorization, 
+        to provide recovery, sleep, and training guidance.
+      </p>
+
+      <div class="card pad">
+        <h2 style="margin-top:0;">Purpose</h2>
+        <p>
+          AI Health Coach App helps users unify wearable health signals and receive AI-assisted 
+          training and recovery guidance based on trends in physiological data.
+        </p>
+
+        <h2>Data collected (with consent)</h2>
+        <ul>
+          <li>Sleep duration and sleep stages</li>
+          <li>Recovery score</li>
+          <li>Heart rate variability (HRV)</li>
+          <li>Resting heart rate</li>
+          <li>Strain and workout sessions</li>
+        </ul>
+
+        <h2>User consent & access control</h2>
+        <ul>
+          <li>Users explicitly authorize WHOOP access via OAuth.</li>
+          <li>Users may disconnect WHOOP at any time within app settings.</li>
+          <li>Users may delete all stored data using the in-app data deletion feature.</li>
+        </ul>
+
+        <h2>How the data is used</h2>
+        <ul>
+          <li>Trend sleep and recovery metrics over time.</li>
+          <li>Generate AI-assisted training and recovery suggestions.</li>
+          <li>Provide transparent explanations tied to recent changes in metrics.</li>
+        </ul>
+
+        <h2>What we do not do</h2>
+        <ul>
+          <li>We do not sell user data.</li>
+          <li>We do not provide medical diagnosis or treatment.</li>
+          <li>We do not access WHOOP data without explicit user authorization.</li>
+        </ul>
+
+        <div class="pills" style="margin-top:14px;">
+          <a class="pill" href="/privacy">Privacy Policy</a>
+          <a class="pill" href="/data-deletion">Data Deletion</a>
+          <a class="pill" href="/terms">Terms of Use</a>
+        </div>
+      </div>
+
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="btn primary" href="/contact">Contact the developer</a>
+        <a class="btn" href="/ai-health-coach">App overview</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,52 +1,48 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'Data Deletion | Teknical Solutionz';
-const description = 'How to delete your AI Health Coach App data, including the in-app Delete All Data option.';
+const title = 'Data Deletion';
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description="How to request deletion of your AI Health Coach App data.">
   <section class="section">
-    <div class="container" style="max-width: 920px;">
+    <div class="container">
       <h1>Data Deletion</h1>
-      <p class="sub">
-        Teknical Solutionz provides users with clear options to delete their data from the AI Health Coach App.
-      </p>
+      <p class="muted">Last updated: February 17, 2026</p>
 
-      <div class="card pad" style="margin-top: 16px;">
-        <h2 style="margin-top:0;">Option 1: Delete within the app (recommended)</h2>
-        <p>
-          Open the AI Health Coach App and navigate to <strong>Settings</strong>.
-          Use the <strong>Delete All Data</strong> button to permanently delete your stored App data.
-        </p>
-        <p class="small">
-          This action is intended to remove your stored App data. If you have connected wearable platforms, you can also revoke access
-          from the provider’s connection settings to prevent future sync.
-        </p>
-      </div>
-
-      <div class="card pad" style="margin-top: 14px;">
-        <h2 style="margin-top:0;">Option 2: Request deletion by email</h2>
-        <p>
-          If you prefer, email us from the address associated with your account and request deletion:
-        </p>
-        <p>
-          <strong>Email:</strong> <a href="mailto:joseph.toland@teknicalsolutionz.com">joseph.toland@teknicalsolutionz.com</a><br/>
-          <strong>Subject:</strong> Data Deletion Request
-        </p>
-        <p>
-          Please include the email associated with your account and a brief confirmation that you want your data deleted.
-        </p>
-      </div>
-
-      <h2>Processing time</h2>
       <p>
-        We typically confirm deletion completion by email. Deletion requests are processed within 30 days.
-        Backup data, if applicable, is securely purged during normal retention cycles.
+        You can request deletion of your AI Health Coach App account and associated data at any time.
       </p>
 
-      <p style="margin-top:18px;">
-        <a class="btn" href="/privacy">View Privacy Policy</a>
+      <h2>How to request deletion</h2>
+      <ol>
+        <li>
+          Email us from the address associated with your account at
+          <a href="mailto:joseph.toland@teknicalsolutionz.com">joseph.toland@teknicalsolutionz.com</a>
+          with the subject line <strong>"Delete my AI Health Coach App account"</strong>.
+        </li>
+        <li>
+          Include the email address you use to sign in and any relevant identifiers (if provided in-app).
+        </li>
+      </ol>
+
+      <h2>What we delete</h2>
+      <ul>
+        <li>Your account profile (name, email, settings)</li>
+        <li>Health and fitness data stored for your account (including Garmin data, if connected)</li>
+        <li>Derived analytics and recommendations associated with your account</li>
+      </ul>
+
+      <h2>Timing</h2>
+      <p>
+        We typically process deletion requests within 30 days. Certain records may be retained as required by law
+        or for security/fraud prevention, and will be deleted when no longer required.
+      </p>
+
+      <h2>Disconnecting Garmin</h2>
+      <p>
+        You can also revoke Garmin access at any time by disconnecting the integration in-app, or by revoking
+        access in your Garmin account/consent settings.
       </p>
     </div>
   </section>
