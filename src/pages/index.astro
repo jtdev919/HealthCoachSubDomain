@@ -1,118 +1,415 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'AI Health Coach App | Wearables + AI Training Guidance';
-const description = 'AI Health Coach App unifies wearable data (including Garmin Connect), sleep, recovery, and training signals to generate AI-suggested workout plans and ongoing analysis.';
+const title = 'AI Health Coach App | Your Health Data, Decoded';
+const description = 'Connect your wearables, labs, and supplements into one AI-powered platform. Get your Longevity Index, biological age, N=1 insights, and evidence-based plans.';
 ---
 
 <BaseLayout title={title} description={description}>
+
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
-      <div class="hero-grid">
-        <div>
+      <div class="hero-split">
+        <div class="hero-text">
           <div class="kicker">
-            <span aria-hidden="true">●</span>
-            Wearables + AI training guidance • Built by Teknical Solutionz
+            <span aria-hidden="true">&#9679;</span>
+            Garmin &middot; WHOOP &middot; Oura &middot; Apple Health &middot; 57+ biomarkers
           </div>
-          <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin:18px 0 10px 0;">
-  <img src="/healthcoachapp-icon.png" class="app-hero-icon" alt="AI Health Coach App logo" style="height:72px; display:block;" />
-  <div>
-    <div style="font-weight:900; font-size:28px; line-height:1.1;">AI Health Coach App</div>
-    <div class="small" style="margin-top:4px;">by Teknical Solutionz</div>
-  </div>
-</div>
-          <h1>Your health data, in one place — with AI suggested plans.</h1>
+
+          <h1>Stop guessing.<br/>Start knowing.</h1>
+
           <p class="lead">
-            Connect your wearables, unify your health signals, and get AI-suggested workout plans with ongoing analysis.
-            Built for real-world training: sleep, recovery, stress, and readiness — all in one spot.
+            You track everything &mdash; sleep, HRV, workouts, labs, supplements &mdash;
+            across five different apps. AI Health Coach pulls it all into one place,
+            finds patterns only <em>your</em> data can reveal, and tells you exactly what to do next.
           </p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 14px;">
-            <a class="btn primary" href="/garmin">Garmin integration details</a>
-            <a class="btn" href="/contact">Request access / demo</a>
-          </div>
-          <div class="pills">
-            <a class="pill" href="/garmin">Garmin Connect</a>
-            <a class="pill" href="/whoop">WHOOP</a>
-            <span class="pill">Oura</span>
-            <span class="pill">Apple Health</span>
-            <span class="pill">AI insights</span>
-          </div>
-          <div class="small" style="margin-top:10px;">
-            Connected integrations: 
-            <a href="/garmin">Garmin</a> • <a href="/whoop">WHOOP</a>
-            <span style="opacity:.8;"> • Oura (coming soon) • Apple Health (coming soon)</span>
-          </div>
 
+          <div style="margin-top:8px;">
+            <a class="btn primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdRhAStyQpK484QXvk2icOUqBqIVyzZFIQG8o_4thZX6WlnoA/viewform" target="_blank" rel="noopener">
+              Get Early Access &rarr;
+            </a>
+          </div>
+          <p class="small" style="margin-top:10px;">
+            Join biohackers and health optimizers getting early access. No spam, ever.
+          </p>
         </div>
-        <div class="card pad">
-          <div style="font-weight:800; font-size:16px; margin-bottom:10px;">How Garmin data is used</div>
-          <div class="small" style="margin-bottom: 14px;">
-            Users explicitly connect Garmin Connect to sync activity, sleep, and training signals. We use that data to generate personalized, AI-assisted insights and suggested workout plans. Users can disconnect at any time.
-          </div>
-
-          <div class="grid" style="gap: 10px;">
-            <div class="feature">
-              <h3>1. Connect</h3>
-              <p>Authorize Garmin Connect (OAuth) and select what to share.</p>
-            </div>
-            <div class="feature">
-              <h3>2. Analyze</h3>
-              <p>Normalize metrics (sleep, HRV, load) and detect trends.</p>
-            </div>
-            <div class="feature">
-              <h3>3. Recommend</h3>
-              <p>Generate AI-guided workouts, recovery guidance, and explanations.</p>
-            </div>
-          </div>
-
-          <div style="margin-top: 14px;">
-            <a class="btn" href="/garmin">Garmin integration details</a>
+        <div class="hero-screenshot">
+          <div class="phone-frame">
+            <img src="/screenshots/dashboard-scores.png" alt="AI Health Coach dashboard showing Biological Age, Longevity Score, Sleep Debt alert, and HRV trends" loading="eager" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== THE PROBLEM ===== -->
   <section class="section">
     <div class="container">
-      <h2>Key features</h2>
-      <p class="sub">A dedicated consumer app that turns wearable signals into actionable training guidance.</p>
-
-      <div class="grid cols-3">
-  <div class="feature"><h3>Wearable integrations</h3><p>Connect Garmin Connect, Oura, and Apple Health
-            <br />WHOOP (with permission) to sync sleep, readiness, activity, and training signals.</p></div>
-  <div class="feature"><h3>All your data in one spot</h3><p>Unified timeline and trends across sleep, recovery, training load, and behavior.</p></div>
-  <div class="feature"><h3>AI-suggested workout plans</h3><p>Personalized guidance based on recent recovery and training signals, with “why” explanations.</p></div>
-  <div class="feature"><h3>Ongoing analysis</h3><p>Trend detection, weekly summaries, and flags when recovery or load drifts out of range.</p></div>
-  <div class="feature"><h3>Privacy controls</h3><p>Users control what they connect and can revoke access any time. In-app “Delete All Data” is supported.</p></div>
-  <div class="feature"><h3>Export & sharing</h3><p>Export key metrics and summaries for discussion with a coach or clinician (where supported).</p></div>
-</div>
-
-<div style="margin-top: 18px;">
-        <a class="btn primary" href="/garmin">How data is used</a>
+      <div class="card pad" style="max-width:800px; margin:0 auto; text-align:center;">
+        <h2 style="margin-top:0;">Sound familiar?</h2>
+        <div class="problem-grid">
+          <div class="problem-item">
+            <div class="problem-icon">5+</div>
+            <p>Apps tracking different parts of your health that never talk to each other</p>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">?</div>
+            <p>Lab results sitting in a PDF you glanced at once and never really understood</p>
+          </div>
+          <div class="problem-item">
+            <div class="problem-icon">0</div>
+            <p>Actionable answers about what your data actually means <em>together</em></p>
+          </div>
+        </div>
+        <p class="sub" style="margin: 18px auto 0; text-align:center;">
+          You&rsquo;re doing the hard part &mdash; tracking everything. But nobody is connecting the dots.
+          <strong>Until now.</strong>
+        </p>
       </div>
     </div>
   </section>
 
+  <!-- ===== YOUR SCORES ===== -->
   <section class="section">
-  <div class="container">
-    <div class="card pad">
-      <div class="grid cols-2">
-        <div>
-          <h2 style="margin-top:0;">Compliance links</h2>
-          <p class="sub" style="margin-bottom:0;">Required policies for wearable API programs are publicly accessible:</p>
-          <div class="pills">
-            <a class="pill" href="/privacy">Privacy Policy</a>
-            <a class="pill" href="/data-deletion">Data Deletion</a>
-            <a class="pill" href="/terms">Terms of Use</a>
-          </div>
+    <div class="container">
+      <h2 id="how-it-works" style="text-align:center;">Your health, scored</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        Not another dashboard of numbers. Real scores that tell you where you stand and what to fix first.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="feature">
+          <h3>Longevity Index</h3>
+          <p>A single 0&ndash;100 score across cardiovascular, metabolic, and recovery pillars.
+             Built from your HRV, VO2max, sleep, ApoB, fasting glucose, hsCRP, and more. Letter graded A+ to F.</p>
         </div>
-        <div style="display:flex; flex-direction:column; gap:10px; justify-content:center;">
-          <a class="btn primary" href="/garmin">Garmin integration details</a>
-          <a class="btn" href="/contact">Contact</a>
+        <div class="feature">
+          <h3>Biological Age</h3>
+          <p>How old your body actually is vs. your birth certificate. Computed from 8 biomarkers &mdash;
+             or import epigenetic clock results from TruAge, Elysium, or GrimAge.</p>
+        </div>
+        <div class="feature">
+          <h3>Metabolic Health Score</h3>
+          <p>0&ndash;100 score from metabolic syndrome criteria: fasting glucose, HbA1c, triglycerides, HDL,
+             and waist circumference. Updates in real time as new data comes in.</p>
+        </div>
+        <div class="feature">
+          <h3>Cardiovascular Age</h3>
+          <p>Your heart&rsquo;s functional age based on VO2max, resting heart rate, HRV trends, and ApoB.
+             See which factors are aging you &mdash; and which are keeping you young.</p>
+        </div>
+        <div class="feature">
+          <h3>Recovery Score</h3>
+          <p>Daily 0&ndash;100 readiness score combining HRV, sleep quality, soreness, stress, and training load.
+             Know when to push hard and when to back off.</p>
+        </div>
+        <div class="feature">
+          <h3>Centenarian Decathlon</h3>
+          <p>Grip strength, single-leg balance, VO2max, dead hang, wall sit &mdash; the functional fitness markers
+             that predict how well you&rsquo;ll move at 80. Tracked and scored.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ===== AI FEATURES ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">AI that knows your body</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        Not generic chatbot answers. AI grounded in <em>your</em> wearable data, labs, supplements, and history.
+      </p>
+
+      <div class="screenshot-row">
+        <div class="screenshot-row-content">
+          <div class="grid" style="gap:16px;">
+            <div class="feature">
+              <h3>Ask AI anything</h3>
+              <p>Type a health question in plain English. Get structured answers with evidence-based recommendations,
+                 red flags to watch, and questions to bring to your doctor &mdash; all using your actual data as context.</p>
+            </div>
+            <div class="feature">
+              <h3>Lab interpretation</h3>
+              <p>Upload a lab PDF or enter results manually. Get instant plain-English breakdowns:
+                 what&rsquo;s optimal (not just &ldquo;normal&rdquo;), what&rsquo;s trending the wrong way,
+                 and how to improve it. 57+ biomarkers tracked.</p>
+            </div>
+            <div class="feature">
+              <h3>N=1 pattern detection</h3>
+              <p>&ldquo;Your HRV is 18% higher on mornings after 90+ min of deep sleep.&rdquo;
+                 The app correlates your wearable metrics, check-ins, and supplements to find patterns unique to you.</p>
+            </div>
+            <div class="feature">
+              <h3>Proactive nudges</h3>
+              <p>Get alerted when your HRV drops 10%+ from baseline, your training load spikes dangerously,
+                 you&rsquo;re carrying sleep debt, or your lab results are getting stale. No checking required.</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-row-image">
+          <div class="phone-frame">
+            <img src="/screenshots/dashboard-wearables.png" alt="AI Health Coach dashboard showing HRV, RHR, Sleep metrics with trend charts and Ask AI button" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECOMMENDATIONS ENGINE ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="screenshot-row screenshot-row-reverse">
+        <div class="screenshot-row-content">
+          <h2 style="margin-top:0;">Personalized recommendations, every day</h2>
+          <p class="sub" style="margin: 0 0 20px;">
+            Not generic advice. Specific actions based on what your data looked like <em>this morning</em>.
+          </p>
+
+          <div class="grid" style="gap:16px;">
+            <div class="feature">
+              <h3>Daily action plan</h3>
+              <p>Wake up to a prioritized list: &ldquo;Recovery is low &mdash; swap today&rsquo;s strength session for Zone 2.&rdquo;
+                 &ldquo;HRV trending up &mdash; good day to push intensity.&rdquo;
+                 Built from last night&rsquo;s sleep, your training load, and this week&rsquo;s trends.</p>
+            </div>
+            <div class="feature">
+              <h3>Monthly deep dive</h3>
+              <p>AI-generated monthly report: what improved, what declined, which habits correlated with your best weeks,
+                 and 3 specific priorities for the next 30 days. Your personal health brief, every month.</p>
+            </div>
+            <div class="feature">
+              <h3>Smart goal suggestions</h3>
+              <p>The app analyzes your last 14 days and suggests the top 3 goals you should focus on &mdash;
+                 ranked by priority with explanations. &ldquo;Your HRV of 35ms suggests under-recovery &mdash;
+                 sleep optimization should be priority #1.&rdquo;</p>
+            </div>
+            <div class="feature">
+              <h3>AI-built plans</h3>
+              <p>Accept a goal and get a full evidence-based plan: daily actions, weekly schedule,
+                 which metrics to track, and what success looks like. Sleep, recovery, fat loss, fitness, stress &mdash;
+                 all covered.</p>
+            </div>
+          </div>
+        </div>
+        <div class="screenshot-row-image">
+          <div class="phone-frame">
+            <img src="/screenshots/plans.png" alt="AI Health Coach Plans screen showing AI-Powered Suggestions, active goals for HRV enhancement and step count" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT MOVES THE NEEDLE ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">Find out what actually moves the needle</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        You take 12 supplements, do sauna 3x/week, and fast 16 hours a day. But which of those
+        actually matter <em>for you</em>? This is where most health apps stop. This is where we start.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="feature">
+          <h3>Supplement &harr; biomarker correlation</h3>
+          <p>&ldquo;You started NMN 500mg/day 3 months ago. Since then, your NAD proxy markers improved 22%.&rdquo;
+             Automatic before-vs-after analysis for every supplement in your stack, matched to the biomarkers it targets.</p>
+        </div>
+        <div class="feature">
+          <h3>Behavior &harr; recovery correlation</h3>
+          <p>&ldquo;You&rsquo;re 34% more energetic on days after taking magnesium.&rdquo;
+             &ldquo;Sauna sessions correlate with +12% HRV the following morning.&rdquo;
+             Pearson correlation across all your metrics &mdash; surfaced as plain-English insights.</p>
+        </div>
+        <div class="feature">
+          <h3>Sleep &harr; performance patterns</h3>
+          <p>&ldquo;On nights with 90+ min deep sleep, your next-day HRV averages 18% higher.&rdquo;
+             The app finds your personal sleep-performance formula so you can optimize what matters most.</p>
+        </div>
+        <div class="feature">
+          <h3>Protocol experiment reports</h3>
+          <p>Finish an 8-week protocol and get an AI narrative: &ldquo;Here&rsquo;s what changed &mdash;
+             HRV up 15%, sleep score up 8%, energy check-ins improved 0.7 points.
+             Confidence: moderate.&rdquo; Real data, not vibes.</p>
+        </div>
+        <div class="feature">
+          <h3>Biomarker velocity tracking</h3>
+          <p>Not just where your labs are today &mdash; which direction they&rsquo;re headed.
+             Trend lines across 3, 6, and 12 months show whether your ApoB, HbA1c, or Vitamin D
+             is improving, declining, or flat.</p>
+        </div>
+        <div class="feature">
+          <h3>Anonymous benchmarking</h3>
+          <p>&ldquo;Your VO2max (52) is in the 78th percentile for males aged 38&ndash;42.&rdquo;
+             Compare your key metrics to the app&rsquo;s user cohort &mdash; age and sex matched &mdash;
+             without sharing your raw data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTEGRATIONS ===== -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h2>Connects to what you already use</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 16px;">
+        Automatic sync. No manual entry. All your signals in one place.
+      </p>
+      <div class="pills" style="justify-content:center; margin-top:16px;">
+        <a class="pill pill-lg" href="/garmin">Garmin Connect</a>
+        <a class="pill pill-lg" href="/whoop">WHOOP</a>
+        <span class="pill pill-lg">Oura</span>
+        <span class="pill pill-lg">Apple Health</span>
+        <span class="pill pill-lg">Android Health Connect</span>
+      </div>
+      <p class="small" style="margin-top:14px;">
+        Plus: lab PDF upload (LabCorp, Quest, etc.), genetic reports (23andMe, InsideTracker),
+        CGM data, DEXA scans, and manual biomarker entry.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== TRACK EVERYTHING ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">Track everything that matters</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        Wearables, labs, supplements, workouts, fasting, thermal therapy, and daily check-ins &mdash; all in one app.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="feature">
+          <h3>57+ lab biomarkers</h3>
+          <p>Lipids, hormones, thyroid, glucose, inflammation, vitamins, liver, kidney &mdash;
+             with longevity-optimal ranges, not just clinical &ldquo;normal.&rdquo;</p>
+        </div>
+        <div class="feature">
+          <h3>Supplements &amp; protocols</h3>
+          <p>Log your full stack with doses, frequency, and timing. Get interaction warnings.
+             Run structured experiments and see AI-generated before/after reports.</p>
+        </div>
+        <div class="feature">
+          <h3>Workouts &amp; training load</h3>
+          <p>Log sets, reps, and weight. Track 1RM progress. Monitor acute vs. chronic training load ratio
+             to avoid overtraining. Zone 2 cardio tracking built in.</p>
+        </div>
+        <div class="feature">
+          <h3>Fasting intelligence</h3>
+          <p>Start a fast and watch your stage progress: digestive, fat burning, ketosis, autophagy, deep autophagy.
+             Log history and see patterns over time.</p>
+        </div>
+        <div class="feature">
+          <h3>Sauna &amp; cold exposure</h3>
+          <p>Log thermal sessions by type, duration, and temperature.
+             Weekly summaries with HRV correlation analysis.</p>
+        </div>
+        <div class="feature">
+          <h3>Daily check-ins</h3>
+          <p>Quick 30-second daily log: mood, energy, stress, soreness, stamina.
+             Flag confounders like travel, alcohol, or poor sleep. Build streaks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROTOCOLS & EXPERIMENTS ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="card pad" style="max-width:800px; margin:0 auto;">
+        <h2 style="margin-top:0; text-align:center;">Run real experiments on yourself</h2>
+        <p class="sub" style="text-align:center; margin: 0 auto 18px;">
+          Stop wondering if your stack is working. Build a protocol, track adherence, and let AI tell you what changed.
+        </p>
+        <div class="grid cols-3">
+          <div style="text-align:center;">
+            <div class="problem-icon" style="margin:0 auto 8px;">1</div>
+            <p class="small"><strong>Design</strong><br/>Define your protocol: supplements, training changes, nutrition, thermal therapy. Set doses, timing, and duration.</p>
+          </div>
+          <div style="text-align:center;">
+            <div class="problem-icon" style="margin:0 auto 8px;">2</div>
+            <p class="small"><strong>Track</strong><br/>Log daily adherence. The app monitors your HRV, sleep, biomarkers, and check-ins throughout the experiment.</p>
+          </div>
+          <div style="text-align:center;">
+            <div class="problem-icon" style="margin:0 auto 8px;">3</div>
+            <p class="small"><strong>Analyze</strong><br/>Get an AI-generated report: what changed, by how much, and whether it&rsquo;s meaningful. Before vs. after, quantified.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRIVACY ===== -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h2>Your data stays yours</h2>
+      <div class="grid cols-3" style="max-width:800px; margin:12px auto 0;">
+        <div class="feature" style="text-align:center;">
+          <h3>AES-256 encryption</h3>
+          <p>Lab values, supplement names, notes, and genetic data encrypted at rest. Biometric unlock required to view.</p>
+        </div>
+        <div class="feature" style="text-align:center;">
+          <h3>You control access</h3>
+          <p>Connect and disconnect wearables anytime. Delete all data with one tap. Full CSV/JSON export available.</p>
+        </div>
+        <div class="feature" style="text-align:center;">
+          <h3>Share on your terms</h3>
+          <p>Generate time-limited, read-only links to share with your doctor or coach. No one else sees your data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOUNDER ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="card pad founder-card">
+        <h2 style="margin-top:0;">Why I&rsquo;m building this</h2>
+        <p>
+          I spent years tracking everything &mdash; Garmin, bloodwork, supplements, sleep &mdash;
+          across five different apps. When I was dealing with health issues that took too long
+          to get answers on, I realized no tool actually connected the dots. Every app showed
+          me <em>data</em>, but none of them told me what it <em>meant</em>.
+        </p>
+        <p>
+          So I built the tool I wish I had. AI Health Coach isn&rsquo;t a replacement for your
+          doctor &mdash; it&rsquo;s the missing layer that takes all your signals, finds your personal
+          patterns, and helps you ask better questions, train smarter, and stop guessing.
+        </p>
+        <p style="margin-bottom:0;">
+          <strong>&mdash; Joe, Founder</strong><br/>
+          <a href="https://www.instagram.com/healthcoachapp/" target="_blank" rel="noopener" style="color: var(--blue);">
+            Follow the journey on Instagram &rarr;
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BOTTOM CTA ===== -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h2>Get early access</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 20px; max-width:50ch;">
+        Be the first to try AI Health Coach. Drop your info and we&rsquo;ll let you know when it&rsquo;s ready.
+      </p>
+
+      <a class="btn primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdRhAStyQpK484QXvk2icOUqBqIVyzZFIQG8o_4thZX6WlnoA/viewform" target="_blank" rel="noopener">
+        Get Early Access &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== COMPLIANCE ===== -->
+  <section class="section" style="padding-top:0;">
+    <div class="container" style="text-align:center;">
+      <div class="small" style="margin-top:10px;">
+        <a href="/privacy">Privacy Policy</a> &middot;
+        <a href="/data-deletion">Data Deletion</a> &middot;
+        <a href="/terms">Terms of Use</a> &middot;
+        <a href="/garmin">Garmin Integration Details</a>
+      </div>
+    </div>
+  </section>
+
 </BaseLayout>
