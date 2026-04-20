@@ -1,11 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const title = 'AI Health Coach App | Your Health Data, Decoded';
-const description = 'Connect your wearables, labs, and supplements into one AI-powered platform. Get your Longevity Index, biological age, N=1 insights, and evidence-based plans.';
+const title = 'AI Health Coach | Build a Personal Health AI That Learns You';
+const description = 'Train a personal health AI on your wearable data, labs, and supplements. The more you teach it, the smarter it gets, finding patterns your doctors miss and giving you real answers.';
 ---
 
 <BaseLayout title={title} description={description}>
+
+  <!-- ===== BANNER ===== -->
+  <section class="banner-section">
+    <div class="container" style="text-align:center;">
+      <div class="banner-wrapper">
+        <h2 class="banner-title">AI Health Coach App</h2>
+        <img
+          src="/assets/branding/Main Screen.png"
+          alt="AI Health Coach - Elevate Your Health & Performance with personalized guidance based on your wearable data"
+          class="banner-image"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
@@ -17,12 +32,13 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
             Garmin &middot; WHOOP &middot; Oura &middot; Apple Health &middot; 57+ biomarkers
           </div>
 
-          <h1>Stop guessing.<br/>Start knowing.</h1>
+          <h1>Your personal<br/>health LLM. Stop Guessing and Start Knowing!</h1>
 
           <p class="lead">
-            You track everything &mdash; sleep, HRV, workouts, labs, supplements &mdash;
-            across five different apps. AI Health Coach pulls it all into one place,
-            finds patterns only <em>your</em> data can reveal, and tells you exactly what to do next.
+            AI Health Coach isn&rsquo;t just an app. It&rsquo;s a personal large language model
+            trained on <em>your</em> wearable data, labs, and supplements.
+            Feed it everything. Ask it anything. The more you teach it, the more it learns
+            about your body, finding patterns your doctors miss and giving you answers nobody else can.
           </p>
 
           <div style="margin-top:8px;">
@@ -31,7 +47,7 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
             </a>
           </div>
           <p class="small" style="margin-top:10px;">
-            Available now on Android &amp; iOS. Start tracking in minutes.
+            Available now on Android &amp; iOS. Start training your AI in minutes.
           </p>
         </div>
         <div class="hero-screenshot">
@@ -47,35 +63,134 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <section class="section">
     <div class="container">
       <div class="card pad" style="max-width:800px; margin:0 auto; text-align:center;">
-        <h2 style="margin-top:0;">Sound familiar?</h2>
+        <h2 style="margin-top:0;">Get real insights and suggestions</h2>
         <div class="problem-grid">
           <div class="problem-item">
-            <div class="problem-icon">5+</div>
-            <p>Apps tracking different parts of your health that never talk to each other</p>
+            <div class="problem-icon">0</div>
+            <p>ChatGPT and Google give generic health advice based on population averages, not <em>your</em> data</p>
           </div>
           <div class="problem-item">
             <div class="problem-icon">?</div>
-            <p>Lab results sitting in a PDF you glanced at once and never really understood</p>
+            <p>Your doctor glances at labs for 5 minutes and says &ldquo;everything looks fine&rdquo; while you feel terrible</p>
           </div>
           <div class="problem-item">
-            <div class="problem-icon">0</div>
-            <p>Actionable answers about what your data actually means <em>together</em></p>
+            <div class="problem-icon">5+</div>
+            <p>Your health data is scattered across apps that never talk to each other. No one connects the dots</p>
           </div>
         </div>
         <p class="sub" style="margin: 18px auto 0; text-align:center;">
-          You&rsquo;re doing the hard part &mdash; tracking everything. But nobody is connecting the dots.
-          <strong>Until now.</strong>
+          You don&rsquo;t need another app. You need a personal health LLM that actually <em>knows</em> you.
+          One that gets smarter every day you use it.
+          <strong>That&rsquo;s AI Health Coach.</strong>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== YOUR SCORES ===== -->
+  <!-- ===== REAL RESULTS ===== -->
   <section class="section">
     <div class="container">
-      <h2 id="how-it-works" style="text-align:center;">Your health, scored</h2>
+      <h2 style="text-align:center;">Real results. Not hypotheticals.</h2>
       <p class="sub" style="text-align:center; margin: 0 auto 24px;">
-        Not another dashboard of numbers. Real scores that tell you where you stand and what to fix first.
+        This isn&rsquo;t a pitch deck. These are real discoveries made by training an AI on real health data.
+      </p>
+
+      <div class="grid cols-2" style="max-width:900px; margin:0 auto;">
+        <div class="card pad">
+          <h3 style="margin-top:0;">The iron deficiency no one caught</h3>
+          <p>
+            After 2 years of declining energy and stamina on TRT, the HRT clinic kept saying
+            &ldquo;your bloodwork looks amazing.&rdquo; AI Health Coach connected what they didn&rsquo;t.
+            Frequent blood donations required on TRT were depleting iron stores.
+          </p>
+          <div class="lab-proof">
+            <img src="/screenshots/ferritin-lab.png" alt="Lab results showing Ferritin at 18 ng/mL - flagged Low against reference range of 30-400" loading="lazy" />
+            <p class="small" style="margin:8px 0 0; text-align:center;">
+              <strong>Ferritin: 18 ng/mL</strong> Flagged Low. Reference range: 30&ndash;400.
+            </p>
+          </div>
+          <p>
+            <strong>The fix:</strong> Iron bisglycinate 50mg twice daily with Vitamin C.
+            Six weeks later, energy and stamina returning to baseline.
+          </p>
+          <p class="small" style="margin-bottom:0;">
+            <em>The data was there the whole time. AI Health Coach just knew what to look for.</em>
+          </p>
+        </div>
+        <div class="card pad">
+          <h3 style="margin-top:0;">The missing hormone protocol</h3>
+          <p>
+            A clinic suggested dropping HCG from a TRT regimen, saying it wasn&rsquo;t needed.
+            Over the following years: strength declined, libido disappeared, mood tanked.
+            &ldquo;Is this all there is?&rdquo;
+          </p>
+          <div class="lab-proof">
+            <img src="/screenshots/lh-fsh-lab.png" alt="Lab results showing LH at less than 0.3 mIU/mL and FSH at less than 0.3 mIU/mL - both flagged Low" loading="lazy" />
+            <p class="small" style="margin:8px 0 0; text-align:center;">
+              <strong>LH: &lt;0.3</strong> (ref 1.7&ndash;8.6) &nbsp;&bull;&nbsp; <strong>FSH: &lt;0.3</strong> (ref 1.5&ndash;12.4) Both bottomed out.
+            </p>
+          </div>
+          <p>
+            <strong>AI Health Coach flagged it:</strong> Removing HCG crashed LH and FSH levels,
+            hormones critical for mood, libido, and overall well-being. Those markers told the real story.
+          </p>
+          <p class="small" style="margin-bottom:0;">
+            <em>Back on HCG. Starting to feel like himself again.</em>
+          </p>
+        </div>
+      </div>
+
+      <p class="sub" style="text-align:center; margin: 24px auto 0;">
+        Two real problems. Two real answers. Both missed by clinics. Both caught by AI Health Coach
+        because it had been trained on the full picture.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== HOW YOUR AI LEARNS ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 id="how-it-works" style="text-align:center;">The more you teach it, the smarter it gets</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        AI Health Coach doesn&rsquo;t start smart. <em>You</em> make it smart. Every data point, every lab result,
+        every check-in trains your personal health LLM to understand your body better than any generic tool ever could.
+      </p>
+
+      <div class="grid cols-4">
+        <div class="feature" style="text-align:center;">
+          <div class="problem-icon" style="margin:0 auto 8px;">Day 1</div>
+          <h3>Connect &amp; baseline</h3>
+          <p>Sync your wearables and upload your first labs. Your AI establishes your personal baselines:
+             HRV, sleep architecture, biomarker ranges, supplement stack.</p>
+        </div>
+        <div class="feature" style="text-align:center;">
+          <div class="problem-icon" style="margin:0 auto 8px;">Week 2</div>
+          <h3>First patterns emerge</h3>
+          <p>Your AI starts finding connections: which supplements correlate with better recovery,
+             how your sleep affects next-day HRV, what training load your body can handle.</p>
+        </div>
+        <div class="feature" style="text-align:center;">
+          <div class="problem-icon" style="margin:0 auto 8px;">Month 3</div>
+          <h3>Deep understanding</h3>
+          <p>With multiple lab panels and months of wearable data, your AI spots trends your doctor won&rsquo;t:
+             biomarker velocity, supplement-to-outcome correlations, hidden deficiencies.</p>
+        </div>
+        <div class="feature" style="text-align:center;">
+          <div class="problem-icon" style="margin:0 auto 8px;">Year 1+</div>
+          <h3>Your health expert</h3>
+          <p>A year of data creates a deeply personal health model. It knows your seasonal patterns, predicts
+             recovery needs, and proactively flags issues before you feel them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOUR AI LEARNS ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">What your AI builds knowledge about</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        These aren&rsquo;t static dashboards. They&rsquo;re living scores that evolve as your AI learns more about you.
       </p>
 
       <div class="grid cols-3">
@@ -86,7 +201,7 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
         </div>
         <div class="feature">
           <h3>Biological Age</h3>
-          <p>How old your body actually is vs. your birth certificate. Computed from 8 biomarkers &mdash;
+          <p>How old your body actually is vs. your birth certificate. Computed from 8 biomarkers,
              or import epigenetic clock results from TruAge, Elysium, or GrimAge.</p>
         </div>
         <div class="feature">
@@ -97,7 +212,7 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
         <div class="feature">
           <h3>Cardiovascular Age</h3>
           <p>Your heart&rsquo;s functional age based on VO2max, resting heart rate, HRV trends, and ApoB.
-             See which factors are aging you &mdash; and which are keeping you young.</p>
+             See which factors are aging you and which are keeping you young.</p>
         </div>
         <div class="feature">
           <h3>Recovery Score</h3>
@@ -106,7 +221,7 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
         </div>
         <div class="feature">
           <h3>Centenarian Decathlon</h3>
-          <p>Grip strength, single-leg balance, VO2max, dead hang, wall sit &mdash; the functional fitness markers
+          <p>Grip strength, single-leg balance, VO2max, dead hang, wall sit. The functional fitness markers
              that predict how well you&rsquo;ll move at 80. Tracked and scored.</p>
         </div>
       </div>
@@ -116,34 +231,37 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <!-- ===== AI FEATURES ===== -->
   <section class="section">
     <div class="container">
-      <h2 style="text-align:center;">AI that knows your body</h2>
+      <h2 style="text-align:center;">Ask it anything. It answers with <em>your</em> data.</h2>
       <p class="sub" style="text-align:center; margin: 0 auto 24px;">
-        Not generic chatbot answers. AI grounded in <em>your</em> wearable data, labs, supplements, and history.
+        Not a generic chatbot. AI Health Coach is a personal LLM grounded in your wearable data, labs, supplements, and history,
+        and it gets more useful every time you interact with it.
       </p>
 
       <div class="screenshot-row">
         <div class="screenshot-row-content">
           <div class="grid" style="gap:16px;">
             <div class="feature">
-              <h3>Ask AI anything</h3>
-              <p>Type a health question in plain English. Get structured answers with evidence-based recommendations,
-                 red flags to watch, and questions to bring to your doctor &mdash; all using your actual data as context.</p>
+              <h3>Ask your AI anything</h3>
+              <p>&ldquo;Why has my energy been low for 3 weeks?&rdquo; Get answers grounded in your actual data,
+                 not WebMD articles. Your AI cross-references labs, wearables, supplements, and check-ins
+                 to find what&rsquo;s really going on.</p>
             </div>
             <div class="feature">
-              <h3>Lab interpretation</h3>
-              <p>Upload a lab PDF or enter results manually. Get instant plain-English breakdowns:
-                 what&rsquo;s optimal (not just &ldquo;normal&rdquo;), what&rsquo;s trending the wrong way,
-                 and how to improve it. 57+ biomarkers tracked.</p>
+              <h3>Lab interpretation that goes deeper</h3>
+              <p>Upload a lab PDF and your AI doesn&rsquo;t just flag out-of-range values.
+                 It compares against your history, spots trends, and connects results to your symptoms
+                 and supplement stack. 57+ biomarkers tracked over time.</p>
             </div>
             <div class="feature">
               <h3>N=1 pattern detection</h3>
               <p>&ldquo;Your HRV is 18% higher on mornings after 90+ min of deep sleep.&rdquo;
-                 The app correlates your wearable metrics, check-ins, and supplements to find patterns unique to you.</p>
+                 The more data you feed it, the more patterns it finds that are unique to your biology.</p>
             </div>
             <div class="feature">
-              <h3>Proactive nudges</h3>
-              <p>Get alerted when your HRV drops 10%+ from baseline, your training load spikes dangerously,
-                 you&rsquo;re carrying sleep debt, or your lab results are getting stale. No checking required.</p>
+              <h3>Proactive alerts</h3>
+              <p>Your AI doesn&rsquo;t wait for you to ask. It flags when HRV drops 10%+ from baseline,
+                 when training load is spiking dangerously, when labs are getting stale, or when something
+                 in your data doesn&rsquo;t add up.</p>
             </div>
           </div>
         </div>
@@ -156,45 +274,88 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
     </div>
   </section>
 
+  <!-- ===== FEED YOUR AI ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">Feed your AI everything</h2>
+      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
+        Every data point makes your AI smarter. The more you give it, the better it understands you.
+      </p>
+
+      <div class="grid cols-3">
+        <div class="feature">
+          <h3>57+ lab biomarkers</h3>
+          <p>Lipids, hormones, thyroid, glucose, inflammation, vitamins, liver, kidney,
+             all with longevity-optimal ranges, not just clinical &ldquo;normal.&rdquo;</p>
+        </div>
+        <div class="feature">
+          <h3>Supplements &amp; protocols</h3>
+          <p>Log your full stack with doses, frequency, and timing. Your AI tracks what you&rsquo;re taking
+             and correlates it against your biomarkers and how you feel.</p>
+        </div>
+        <div class="feature">
+          <h3>Workouts &amp; training load</h3>
+          <p>Log sets, reps, and weight. Track 1RM progress. Your AI monitors acute vs. chronic training load
+             to tell you when to push and when to recover.</p>
+        </div>
+        <div class="feature">
+          <h3>Fasting intelligence</h3>
+          <p>Start a fast and watch your stage progress: digestive, fat burning, ketosis, autophagy, deep autophagy.
+             Your AI learns how fasting affects your recovery and performance.</p>
+        </div>
+        <div class="feature">
+          <h3>Sauna &amp; cold exposure</h3>
+          <p>Log thermal sessions by type, duration, and temperature.
+             Your AI correlates sessions with HRV and recovery patterns.</p>
+        </div>
+        <div class="feature">
+          <h3>Daily check-ins</h3>
+          <p>Quick 30-second daily log: mood, energy, stress, soreness, stamina.
+             This subjective data is critical. It&rsquo;s how your AI learns what your numbers <em>feel</em> like.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== RECOMMENDATIONS ENGINE ===== -->
   <section class="section">
     <div class="container">
       <div class="screenshot-row screenshot-row-reverse">
         <div class="screenshot-row-content">
-          <h2 style="margin-top:0;">Personalized recommendations, every day</h2>
+          <h2 style="margin-top:0;">Your AI coaches you daily</h2>
           <p class="sub" style="margin: 0 0 20px;">
-            Not generic advice. Specific actions based on what your data looked like <em>this morning</em>.
+            As it learns your patterns, its guidance gets more specific, more personal, and more useful.
           </p>
 
           <div class="grid" style="gap:16px;">
             <div class="feature">
               <h3>Daily action plan</h3>
-              <p>Wake up to a prioritized list: &ldquo;Recovery is low &mdash; swap today&rsquo;s strength session for Zone 2.&rdquo;
-                 &ldquo;HRV trending up &mdash; good day to push intensity.&rdquo;
-                 Built from last night&rsquo;s sleep, your training load, and this week&rsquo;s trends.</p>
+              <p>Wake up to a prioritized list built from last night&rsquo;s sleep, your training load, and this week&rsquo;s trends.
+                 &ldquo;Recovery is low, swap today&rsquo;s strength session for Zone 2.&rdquo;</p>
             </div>
             <div class="feature">
               <h3>Monthly deep dive</h3>
               <p>AI-generated monthly report: what improved, what declined, which habits correlated with your best weeks,
-                 and 3 specific priorities for the next 30 days. Your personal health brief, every month.</p>
+                 and 3 specific priorities for the next 30 days.</p>
             </div>
             <div class="feature">
               <h3>Smart goal suggestions</h3>
-              <p>The app analyzes your last 14 days and suggests the top 3 goals you should focus on &mdash;
-                 ranked by priority with explanations. &ldquo;Your HRV of 35ms suggests under-recovery &mdash;
-                 sleep optimization should be priority #1.&rdquo;</p>
+              <p>Your AI analyzes your last 14 days and suggests the top 3 goals ranked by impact.
+                 &ldquo;Your HRV of 35ms suggests under-recovery. Sleep optimization should be priority #1.&rdquo;</p>
             </div>
             <div class="feature">
-              <h3>AI-built plans</h3>
+              <h3>AI-built protocols</h3>
               <p>Accept a goal and get a full evidence-based plan: daily actions, weekly schedule,
-                 which metrics to track, and what success looks like. Sleep, recovery, fat loss, fitness, stress &mdash;
-                 all covered.</p>
+                 which metrics to track, and what success looks like. Then your AI monitors the results.</p>
             </div>
           </div>
         </div>
-        <div class="screenshot-row-image">
+        <div class="screenshot-row-image screenshot-stack">
           <div class="phone-frame">
-            <img src="/screenshots/plans.jpg" alt="AI Health Coach Dashboard showing sleep chart, weekly insight with recovery recommendations, and Longevity Index" loading="lazy" />
+            <img src="/screenshots/daily suggestions.jpg" alt="AI Health Coach Today's Action Items - Keep intensity moderate today based on HRV and sleep data" loading="lazy" />
+          </div>
+          <div class="phone-frame">
+            <img src="/screenshots/workout suggestions based on recovery data.jpg" alt="AI Health Coach Workouts - Recovery readiness score with workout schedule adjusted based on recovery zone" loading="lazy" />
           </div>
         </div>
       </div>
@@ -204,46 +365,43 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <!-- ===== WHAT MOVES THE NEEDLE ===== -->
   <section class="section">
     <div class="container">
-      <h2 style="text-align:center;">Find out what actually moves the needle</h2>
+      <h2 style="text-align:center;">Your AI finds what actually works for you</h2>
       <p class="sub" style="text-align:center; margin: 0 auto 24px;">
         You take 12 supplements, do sauna 3x/week, and fast 16 hours a day. But which of those
-        actually matter <em>for you</em>? This is where most health apps stop. This is where we start.
+        actually matter <em>for you</em>? Your AI figures that out.
       </p>
 
       <div class="grid cols-3">
         <div class="feature">
           <h3>Supplement &harr; biomarker correlation</h3>
           <p>&ldquo;You started NMN 500mg/day 3 months ago. Since then, your NAD proxy markers improved 22%.&rdquo;
-             Automatic before-vs-after analysis for every supplement in your stack, matched to the biomarkers it targets.</p>
+             Your AI runs automatic before-vs-after analysis for every supplement matched to the biomarkers it targets.</p>
         </div>
         <div class="feature">
           <h3>Behavior &harr; recovery correlation</h3>
           <p>&ldquo;You&rsquo;re 34% more energetic on days after taking magnesium.&rdquo;
              &ldquo;Sauna sessions correlate with +12% HRV the following morning.&rdquo;
-             Pearson correlation across all your metrics &mdash; surfaced as plain-English insights.</p>
+             Correlations surfaced as plain-English insights.</p>
         </div>
         <div class="feature">
           <h3>Sleep &harr; performance patterns</h3>
           <p>&ldquo;On nights with 90+ min deep sleep, your next-day HRV averages 18% higher.&rdquo;
-             The app finds your personal sleep-performance formula so you can optimize what matters most.</p>
+             Your AI finds your personal sleep-performance formula.</p>
         </div>
         <div class="feature">
-          <h3>Protocol experiment reports</h3>
-          <p>Finish an 8-week protocol and get an AI narrative: &ldquo;Here&rsquo;s what changed &mdash;
-             HRV up 15%, sleep score up 8%, energy check-ins improved 0.7 points.
-             Confidence: moderate.&rdquo; Real data, not vibes.</p>
+          <h3>Experiment reports</h3>
+          <p>Finish an 8-week protocol and your AI generates a narrative: &ldquo;HRV up 15%, sleep score up 8%,
+             energy check-ins improved 0.7 points. Confidence: moderate.&rdquo; Real data, not vibes.</p>
         </div>
         <div class="feature">
           <h3>Biomarker velocity tracking</h3>
-          <p>Not just where your labs are today &mdash; which direction they&rsquo;re headed.
-             Trend lines across 3, 6, and 12 months show whether your ApoB, HbA1c, or Vitamin D
-             is improving, declining, or flat.</p>
+          <p>Not just where your labs are today, but which direction they&rsquo;re headed.
+             Trend lines across 3, 6, and 12 months. Your AI flags when trajectories change.</p>
         </div>
         <div class="feature">
           <h3>Anonymous benchmarking</h3>
           <p>&ldquo;Your VO2max (52) is in the 78th percentile for males aged 38&ndash;42.&rdquo;
-             Compare your key metrics to the app&rsquo;s user cohort &mdash; age and sex matched &mdash;
-             without sharing your raw data.</p>
+             Compare your key metrics to the app&rsquo;s user cohort, age and sex matched.</p>
         </div>
       </div>
     </div>
@@ -252,9 +410,9 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <!-- ===== INTEGRATIONS ===== -->
   <section class="section">
     <div class="container" style="text-align:center;">
-      <h2>Connects to what you already use</h2>
+      <h2>Data sources that train your AI</h2>
       <p class="sub" style="text-align:center; margin: 0 auto 16px;">
-        Automatic sync. No manual entry. All your signals in one place.
+        Every integration is another stream of training data. Automatic sync, no manual entry.
       </p>
       <div class="pills" style="justify-content:center; margin-top:16px;">
         <a class="pill pill-lg" href="/garmin">Garmin Connect</a>
@@ -270,56 +428,13 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
     </div>
   </section>
 
-  <!-- ===== TRACK EVERYTHING ===== -->
-  <section class="section">
-    <div class="container">
-      <h2 style="text-align:center;">Track everything that matters</h2>
-      <p class="sub" style="text-align:center; margin: 0 auto 24px;">
-        Wearables, labs, supplements, workouts, fasting, thermal therapy, and daily check-ins &mdash; all in one app.
-      </p>
-
-      <div class="grid cols-3">
-        <div class="feature">
-          <h3>57+ lab biomarkers</h3>
-          <p>Lipids, hormones, thyroid, glucose, inflammation, vitamins, liver, kidney &mdash;
-             with longevity-optimal ranges, not just clinical &ldquo;normal.&rdquo;</p>
-        </div>
-        <div class="feature">
-          <h3>Supplements &amp; protocols</h3>
-          <p>Log your full stack with doses, frequency, and timing. Get interaction warnings.
-             Run structured experiments and see AI-generated before/after reports.</p>
-        </div>
-        <div class="feature">
-          <h3>Workouts &amp; training load</h3>
-          <p>Log sets, reps, and weight. Track 1RM progress. Monitor acute vs. chronic training load ratio
-             to avoid overtraining. Zone 2 cardio tracking built in.</p>
-        </div>
-        <div class="feature">
-          <h3>Fasting intelligence</h3>
-          <p>Start a fast and watch your stage progress: digestive, fat burning, ketosis, autophagy, deep autophagy.
-             Log history and see patterns over time.</p>
-        </div>
-        <div class="feature">
-          <h3>Sauna &amp; cold exposure</h3>
-          <p>Log thermal sessions by type, duration, and temperature.
-             Weekly summaries with HRV correlation analysis.</p>
-        </div>
-        <div class="feature">
-          <h3>Daily check-ins</h3>
-          <p>Quick 30-second daily log: mood, energy, stress, soreness, stamina.
-             Flag confounders like travel, alcohol, or poor sleep. Build streaks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PROTOCOLS & EXPERIMENTS ===== -->
+  <!-- ===== TRAIN THROUGH EXPERIMENTS ===== -->
   <section class="section">
     <div class="container">
       <div class="card pad" style="max-width:800px; margin:0 auto;">
-        <h2 style="margin-top:0; text-align:center;">Run real experiments on yourself</h2>
+        <h2 style="margin-top:0; text-align:center;">Train your AI through experiments</h2>
         <p class="sub" style="text-align:center; margin: 0 auto 18px;">
-          Stop wondering if your stack is working. Build a protocol, track adherence, and let AI tell you what changed.
+          Design a protocol. Your AI observes the outcomes and updates its understanding of what works for you.
         </p>
         <div class="grid cols-3">
           <div style="text-align:center;">
@@ -328,11 +443,11 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
           </div>
           <div style="text-align:center;">
             <div class="problem-icon" style="margin:0 auto 8px;">2</div>
-            <p class="small"><strong>Track</strong><br/>Log daily adherence. The app monitors your HRV, sleep, biomarkers, and check-ins throughout the experiment.</p>
+            <p class="small"><strong>Track</strong><br/>Log daily adherence. Your AI monitors HRV, sleep, biomarkers, and check-ins throughout the experiment.</p>
           </div>
           <div style="text-align:center;">
             <div class="problem-icon" style="margin:0 auto 8px;">3</div>
-            <p class="small"><strong>Analyze</strong><br/>Get an AI-generated report: what changed, by how much, and whether it&rsquo;s meaningful. Before vs. after, quantified.</p>
+            <p class="small"><strong>Learn</strong><br/>Your AI generates a report and integrates the findings. Next time, its recommendations are smarter because of what you taught it.</p>
           </div>
         </div>
       </div>
@@ -342,7 +457,7 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <!-- ===== PRIVACY ===== -->
   <section class="section">
     <div class="container" style="text-align:center;">
-      <h2>Your data stays yours</h2>
+      <h2>Your AI. Your data. No one else&rsquo;s.</h2>
       <div class="grid cols-3" style="max-width:800px; margin:12px auto 0;">
         <div class="feature" style="text-align:center;">
           <h3>AES-256 encryption</h3>
@@ -364,20 +479,25 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <section class="section">
     <div class="container">
       <div class="card pad founder-card">
-        <h2 style="margin-top:0;">Why I&rsquo;m building this</h2>
+        <h2 style="margin-top:0;">Why I built this</h2>
         <p>
-          I spent years tracking everything &mdash; Garmin, bloodwork, supplements, sleep &mdash;
-          across five different apps. When I was dealing with health issues that took too long
-          to get answers on, I realized no tool actually connected the dots. Every app showed
-          me <em>data</em>, but none of them told me what it <em>meant</em>.
+          I was on TRT for 6 years, tracking everything across Garmin, bloodwork panels, and supplement logs.
+          For the last 2 years my energy and stamina were declining. Every visit to the clinic:
+          &ldquo;Your bloodwork looks amazing.&rdquo; But I felt terrible.
         </p>
         <p>
-          So I built the tool I wish I had. AI Health Coach isn&rsquo;t a replacement for your
-          doctor &mdash; it&rsquo;s the missing layer that takes all your signals, finds your personal
-          patterns, and helps you ask better questions, train smarter, and stop guessing.
+          I didn&rsquo;t need another app. I needed an AI that could see the full picture.
+          One I could teach about my body, my protocols, and my history. So I built it.
+          Within weeks it caught what the clinic missed for 2 years: iron deficiency from required blood
+          donations, and hormone imbalances from a protocol change they said &ldquo;wouldn&rsquo;t matter.&rdquo;
+        </p>
+        <p>
+          AI Health Coach isn&rsquo;t a replacement for your doctor. It&rsquo;s a personal health AI
+          that you train with your own data. The more you teach it, the better it knows you.
+          And when something&rsquo;s off, it doesn&rsquo;t tell you everything looks fine. It tells you why.
         </p>
         <p style="margin-bottom:0;">
-          <strong>&mdash; Joe, Founder</strong><br/>
+          <strong>- Joe, Founder</strong><br/>
           <a href="https://www.instagram.com/healthcoachapp/" target="_blank" rel="noopener" style="color: var(--blue);">
             Follow the journey on Instagram &rarr;
           </a>
@@ -389,9 +509,10 @@ const description = 'Connect your wearables, labs, and supplements into one AI-p
   <!-- ===== BOTTOM CTA ===== -->
   <section class="section">
     <div class="container" style="text-align:center;">
-      <h2>Ready to stop guessing?</h2>
+      <h2>Start training AI Health Coach today</h2>
       <p class="sub" style="text-align:center; margin: 0 auto 20px; max-width:50ch;">
-        Download AI Health Coach and start connecting your health data today.
+        The sooner you start feeding it data, the sooner your personal health LLM starts finding answers.
+        AI Health Coach is waiting to learn you.
       </p>
 
       <a class="btn primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdRhAStyQpK484QXvk2icOUqBqIVyzZFIQG8o_4thZX6WlnoA/viewform" target="_blank" rel="noopener">
