@@ -4,77 +4,223 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Privacy Policy';
 ---
 
-<BaseLayout title={title} description="Privacy policy for the AI Health Coach App by Teknical Solutionz.">
+<BaseLayout title={title} description="Privacy policy for the HealthCoach App by Teknikal Solutionz LLC.">
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last updated: February 2026</p>
+      <p class="muted">Last Updated: May 16, 2026</p>
 
       <p>
-        This Privacy Policy describes how <strong>Teknical Solutionz LLC</strong> ("we", "us") collects, uses, and
-        protects information when you use the <strong>AI Health Coach App</strong> and associated services
-        (collectively, the "Service").
+        Teknikal Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
+        Privacy Policy explains how we collect, use, store, and protect your information when you use our App.
+      </p>
+      <p>
+        By using HealthCoach, you agree to the collection and use of information as described in this policy.
       </p>
 
-      <h2>What we collect</h2>
+      <h2>1. Information We Collect</h2>
+
+      <h3>1.1 Account Information</h3>
       <ul>
-        <li><strong>Account information</strong> you provide (e.g., name, email address, basic profile details).</li>
-        <li>
-          <strong>Health &amp; fitness data</strong> you choose to connect and share from wearable providers
-          (e.g., Garmin Connect) and/or manual entries (workouts, sleep, biometrics, notes).
-        </li>
-        <li><strong>App usage &amp; diagnostics</strong> (e.g., crashes, performance metrics) to improve reliability.</li>
+        <li>Email address</li>
+        <li>Display name</li>
+        <li>Authentication identifiers (Apple Sign-In user ID or Microsoft Entra ID)</li>
       </ul>
 
-      <h2>How we use data</h2>
+      <h3>1.2 Health and Fitness Data</h3>
+      <p>We collect health and biometric data that you choose to provide or sync, including:</p>
       <ul>
-        <li>Provide the Service and the features you request (syncing, dashboards, and insights).</li>
-        <li>Generate recommendations and summaries based on your connected data and your inputs.</li>
-        <li>Maintain security, prevent abuse, and troubleshoot issues.</li>
+        <li>Heart rate variability (HRV)</li>
+        <li>Resting heart rate (RHR)</li>
+        <li>Sleep duration, stages, and quality scores</li>
+        <li>Steps and active calories</li>
+        <li>VO2 max estimates</li>
+        <li>Blood oxygen saturation (SpO2)</li>
+        <li>Respiratory rate</li>
+        <li>Body temperature deviations</li>
+        <li>Workout and exercise data (sets, reps, weight, RPE)</li>
+        <li>Daily subjective check-ins (mood, energy, stress, soreness)</li>
+        <li>Continuous glucose monitor (CGM) readings</li>
+        <li>Blood pressure measurements</li>
+        <li>Body composition data (DEXA scans)</li>
+        <li>Fasting session records</li>
+        <li>Thermal exposure sessions (sauna and cold exposure)</li>
       </ul>
 
-      <h2>Garmin data usage (high level)</h2>
-      <p>
-        If you connect Garmin Connect, you explicitly authorize data sharing via OAuth and can revoke access at any
-        time. We use Garmin data to display your training, activity, and recovery signals inside the app and to
-        power personalized insights. We do not sell Garmin data.
-      </p>
-
-      <h2>Sharing</h2>
-      <p>
-        We do not sell your personal data. We only share data with service providers needed to operate the Service
-        (e.g., hosting/analytics) under appropriate contractual protections, or if required by law.
-      </p>
-
-      <h2>Data retention</h2>
-      <p>
-        We retain data as long as your account is active or as needed to provide the Service. You can request
-        deletion at any time (see the Data Deletion page).
-      </p>
-
-      <h2>Your choices</h2>
+      <h3>1.3 Lab Results and Biomarkers</h3>
       <ul>
-        <li>Connect or disconnect data sources at any time.</li>
-        <li>Request an export of your data, when available.</li>
-        <li>Request deletion of your data and/or account.</li>
+        <li>Lab test results uploaded manually or extracted from PDF documents via AI processing</li>
+        <li>Biomarker values, units, test dates, and reference ranges</li>
+        <li>Supplement and medication names, dosages, and schedules</li>
       </ul>
 
-      <h2>Contact</h2>
+      <h3>1.4 Apple HealthKit Data</h3>
+      <p>With your explicit permission, HealthCoach reads the following data from Apple HealthKit:</p>
+      <ul>
+        <li>Heart rate variability (SDNN)</li>
+        <li>Resting heart rate</li>
+        <li>Sleep analysis (duration, stages including deep, REM, and light sleep)</li>
+        <li>Step count</li>
+        <li>VO2 max</li>
+        <li>Blood oxygen saturation</li>
+        <li>Respiratory rate</li>
+        <li>Active energy burned</li>
+        <li>Workout sessions</li>
+        <li>Blood glucose (from connected CGM devices)</li>
+      </ul>
+      <p>HealthCoach may also write the following data to Apple HealthKit:</p>
+      <ul>
+        <li>Workout sessions</li>
+        <li>Fitness and wellness metrics</li>
+      </ul>
       <p>
-        For privacy questions or requests, contact:
-        <a href="mailto:joseph.toland@teknicalsolutionz.com">joseph.toland@teknicalsolutionz.com</a>
+        We use HealthKit data solely to provide you with personalized health insights, recovery scores, training
+        recommendations, and trend analysis within the App. HealthKit data is never used for advertising, sold to
+        third parties, or shared with data brokers. HealthKit data is not used for purposes unrelated to health and
+        fitness functionality.
+      </p>
+
+      <h3>1.5 Wearable Device Data</h3>
+      <p>With your authorization, we sync data from connected wearable devices:</p>
+      <ul>
+        <li>Oura Ring (sleep, activity, readiness, HRV, temperature)</li>
+        <li>Apple Watch (via HealthKit as described above)</li>
+        <li>Garmin (sleep, activity, body battery, stress, HRV)</li>
+        <li>WHOOP (recovery, strain, sleep, HRV)</li>
+        <li>Withings (body composition, blood pressure)</li>
+      </ul>
+
+      <h3>1.6 App Usage and Diagnostics</h3>
+      <ul>
+        <li>Feature usage patterns (anonymized)</li>
+        <li>Crash reports and error logs</li>
+        <li>Device type, operating system version, and app version</li>
+      </ul>
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We use your information exclusively to:</p>
+      <ul>
+        <li>Provide personalized health insights, recovery scores, and training recommendations</li>
+        <li>Generate AI-powered health plans and goal suggestions based on your biometric data</li>
+        <li>Analyze trends in your health metrics over time</li>
+        <li>Calculate correlations between your behaviors and health outcomes (N=1 analytics)</li>
+        <li>Extract biomarkers from uploaded lab documents</li>
+        <li>Generate weekly health summaries and coaching recommendations</li>
+        <li>Track supplement protocols and provide progress reports</li>
+        <li>Estimate biological age and longevity metrics</li>
+        <li>Deliver glucose intelligence and nutrition recommendations</li>
+        <li>Send local notifications for protocol reminders and health nudges</li>
+        <li>Improve app performance and fix bugs</li>
+      </ul>
+      <p>We do <strong>NOT</strong> use your health data for:</p>
+      <ul>
+        <li>Advertising or marketing to you based on health conditions</li>
+        <li>Selling to third parties or data brokers</li>
+        <li>Sharing with employers, insurers, or any entity that could use it against you</li>
+        <li>Any purpose unrelated to your direct health and fitness benefit</li>
+      </ul>
+
+      <h2>3. Authentication</h2>
+      <p>HealthCoach offers the following sign-in methods:</p>
+      <ul>
+        <li>Sign in with Apple (Apple ID)</li>
+        <li>Microsoft account (via Microsoft Entra External ID)</li>
+      </ul>
+      <p>
+        We receive only the minimal information needed to authenticate you (user identifier, email, and display name).
+        We do not receive or store your password for any authentication provider.
+      </p>
+
+      <h2>4. Data Security and Encryption</h2>
+      <p>We take the security of your health data seriously:</p>
+      <ul>
+        <li>All data in transit is encrypted using HTTPS/TLS</li>
+        <li>Sensitive health data at rest (lab results, biomarker values, goal descriptions, plan details, supplement names) is encrypted using AES-256 encryption</li>
+        <li>Encryption keys are managed through Azure Key Vault, a FIPS 140-2 compliant key management service</li>
+        <li>Authentication tokens are stored in platform-secure storage (iOS Keychain, Android Keystore)</li>
+        <li>Local app data is stored in an encrypted SQLite database on your device</li>
+        <li>We maintain a complete audit trail of all data access for security monitoring</li>
+      </ul>
+
+      <h2>5. Data Storage and Retention</h2>
+      <ul>
+        <li>Your data is stored on Microsoft Azure servers located in the United States</li>
+        <li>We retain your data for as long as your account is active</li>
+        <li>You may request deletion of your account and all associated data at any time</li>
+        <li>Upon account deletion, all personal and health data is permanently removed from our servers within 30 days</li>
+        <li>Anonymized, aggregated data that cannot be linked back to you may be retained for service improvement</li>
+      </ul>
+
+      <h2>6. In-App Subscriptions</h2>
+      <p>
+        HealthCoach offers optional subscription plans that unlock premium features. Subscription purchases are
+        processed through Apple's App Store (iOS) or Google Play Store (Android). We do not directly collect or store
+        your payment information (credit card numbers, billing address). Subscription status is verified through the
+        respective platform's APIs to enable premium features.
+      </p>
+
+      <h2>7. Third-Party Services</h2>
+      <p>We use the following third-party services:</p>
+      <ul>
+        <li><strong>Microsoft Azure</strong> (cloud hosting and data storage)</li>
+        <li><strong>Azure Key Vault</strong> (encryption key management)</li>
+        <li><strong>OpenAI GPT-4o</strong> (AI-powered plan generation, lab parsing, and health insights — your data is sent to OpenAI's API for processing but is not used to train their models)</li>
+        <li><strong>Application Insights</strong> (anonymized crash reporting and performance monitoring)</li>
+        <li><strong>Open Food Facts</strong> (supplement barcode lookup — public database, no personal data sent)</li>
+      </ul>
+      <p>
+        We do not share your personally identifiable health data with any third-party service for purposes other than
+        providing direct App functionality as described above.
+      </p>
+
+      <h2>8. AI Processing</h2>
+      <p>HealthCoach uses OpenAI's GPT-4o to:</p>
+      <ul>
+        <li>Generate personalized health and fitness plans</li>
+        <li>Extract biomarkers from uploaded lab documents</li>
+        <li>Suggest health goals based on your data</li>
+        <li>Generate weekly insights and meal plans</li>
+      </ul>
+      <p>
+        When AI processing occurs, relevant portions of your health data are sent to OpenAI's API. This data is
+        processed in real-time and is not retained by OpenAI for model training purposes per our data processing
+        agreement with OpenAI.
+      </p>
+
+      <h2>9. Your Rights and Choices</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Access all personal data we hold about you</li>
+        <li>Request correction of inaccurate data</li>
+        <li>Request deletion of your account and all data</li>
+        <li>Revoke HealthKit access at any time through iOS Settings</li>
+        <li>Disconnect any wearable device integration at any time</li>
+        <li>Opt out of optional notifications</li>
+        <li>Export your health data (clinician reports, protocol reports)</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at the email address below.</p>
+
+      <h2>10. Children's Privacy</h2>
+      <p>
+        HealthCoach is not intended for use by children under the age of 13. We do not knowingly collect personal
+        information from children under 13. If we discover that we have collected data from a child under 13, we will
+        delete it promptly.
+      </p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. We will notify you of any material changes by posting
+        the updated policy within the App or sending a notification. Your continued use of the App after changes
+        constitutes acceptance of the updated policy.
+      </p>
+
+      <h2>12. Contact Us</h2>
+      <p>If you have questions or concerns about this Privacy Policy or your data:</p>
+      <p>
+        Email: <a href="mailto:joseph.toland@teknicalsolutionz.com">joseph.toland@teknicalsolutionz.com</a><br />
+        Company: Teknikal Solutionz LLC<br />
+        Website: <a href="https://healthcoach.teknicalsolutionz.com">https://healthcoach.teknicalsolutionz.com</a>
       </p>
     </div>
   </section>
 </BaseLayout>
-
-<h2>WHOOP Data</h2>
-<p>
-If you connect WHOOP, we collect sleep metrics, recovery data (HRV, resting heart rate),
-strain, and workout sessions. This data is used solely to provide personalized insights
-and AI-assisted training guidance.
-</p>
-<p>
-WHOOP data is accessed only after explicit user authorization via OAuth.
-Users may disconnect WHOOP at any time and request deletion of all stored data.
-</p>
