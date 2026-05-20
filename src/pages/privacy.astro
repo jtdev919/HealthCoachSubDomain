@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: May 16, 2026</p>
+      <p class="muted">Last Updated: May 20, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -97,6 +97,13 @@ const title = 'Privacy Policy';
         <li>Device type, operating system version, and app version</li>
       </ul>
 
+      <h3>1.7 Camera</h3>
+      <p>
+        HealthCoach uses your device camera solely to scan barcodes and QR codes on supplement and food packaging. Images
+        captured during scanning are processed locally on your device in real-time and are never stored, uploaded, or
+        transmitted to our servers.
+      </p>
+
       <h2>2. How We Use Your Information</h2>
       <p>We use your information exclusively to:</p>
       <ul>
@@ -140,6 +147,7 @@ const title = 'Privacy Policy';
         <li>Authentication tokens are stored in platform-secure storage (iOS Keychain, Android Keystore)</li>
         <li>Local app data is stored in an encrypted SQLite database on your device</li>
         <li>We maintain a complete audit trail of all data access for security monitoring</li>
+        <li>Biometric authentication (Face ID, Touch ID, or fingerprint) is handled entirely by your device's operating system. HealthCoach never accesses, processes, or stores your biometric data. We only receive a pass/fail result from the operating system.</li>
       </ul>
 
       <h2>5. Data Storage and Retention</h2>
@@ -164,7 +172,7 @@ const title = 'Privacy Policy';
       <ul>
         <li><strong>Microsoft Azure</strong> (cloud hosting and data storage)</li>
         <li><strong>Azure Key Vault</strong> (encryption key management)</li>
-        <li><strong>OpenAI GPT-4o</strong> (AI-powered plan generation, lab parsing, and health insights — your data is sent to OpenAI's API for processing but is not used to train their models)</li>
+        <li><strong>OpenAI GPT-4o</strong> — AI-powered health plan generation, lab document parsing, and wellness insights. Your health data is routed through our Azure backend before being sent to OpenAI's API for processing. Only anonymized health context is sent — never your name, email, or account identifiers. Data is not retained by OpenAI for model training per our data processing agreement.</li>
         <li><strong>Application Insights</strong> (anonymized crash reporting and performance monitoring)</li>
         <li><strong>Open Food Facts</strong> (supplement barcode lookup — public database, no personal data sent)</li>
       </ul>
@@ -174,17 +182,17 @@ const title = 'Privacy Policy';
       </p>
 
       <h2>8. AI Processing</h2>
-      <p>HealthCoach uses OpenAI's GPT-4o to:</p>
-      <ul>
-        <li>Generate personalized health and fitness plans</li>
-        <li>Extract biomarkers from uploaded lab documents</li>
-        <li>Suggest health goals based on your data</li>
-        <li>Generate weekly insights and meal plans</li>
-      </ul>
       <p>
-        When AI processing occurs, relevant portions of your health data are sent to OpenAI's API. This data is
-        processed in real-time and is not retained by OpenAI for model training purposes per our data processing
-        agreement with OpenAI.
+        HealthCoach uses AI to generate personalized health plans, extract biomarkers from lab documents, and provide
+        wellness insights. When AI processing occurs, relevant portions of your health data are sent from our Azure
+        Functions backend to OpenAI's API. Your data never leaves our Azure infrastructure directly from your device — it is
+        first received and processed by our secure Azure servers, then forwarded to OpenAI's API for AI analysis.
+      </p>
+      <p>
+        Only the minimum health data necessary for the specific AI task is included (e.g., lab values, wearable trends,
+        health profile context). Your name, email address, and other directly identifying information are never sent to
+        OpenAI. This data is processed in real-time and is not retained by OpenAI for model training purposes per our data
+        processing agreement.
       </p>
 
       <h2>9. Your Rights and Choices</h2>
@@ -207,14 +215,33 @@ const title = 'Privacy Policy';
         delete it promptly.
       </p>
 
-      <h2>11. Changes to This Policy</h2>
+      <h2>11. California Residents (CCPA)</h2>
+      <p>
+        If you are a California resident, you have the right to: request disclosure of the categories and specific pieces of
+        personal information we have collected about you; request deletion of your personal information; and opt out of the
+        sale of your personal information. HealthCoach does not sell, rent, or share your personal information with third
+        parties for their marketing purposes. To exercise your rights, contact us at <a href="mailto:josephtoland@teknicalsolutionz.com">josephtoland@teknicalsolutionz.com</a> or
+        use the "Delete All My Data" option in the app's Settings.
+      </p>
+
+      <h2>12. European Residents (GDPR)</h2>
+      <p>
+        If you are located in the European Economic Area (EEA) or United Kingdom, we process your personal data under the
+        following legal bases: consent (for HealthKit access and wearable device connections), contract performance (to
+        provide the app's core functionality), and legitimate interest (for crash reporting and service improvement). You
+        have the right to access, rectify, erase, restrict processing, and port your data. You also have the right to
+        withdraw consent at any time and to lodge a complaint with your local data protection authority. To exercise your
+        rights, contact us at <a href="mailto:josephtoland@teknicalsolutionz.com">josephtoland@teknicalsolutionz.com</a>.
+      </p>
+
+      <h2>13. Changes to This Policy</h2>
       <p>
         We may update this Privacy Policy from time to time. We will notify you of any material changes by posting
         the updated policy within the App or sending a notification. Your continued use of the App after changes
         constitutes acceptance of the updated policy.
       </p>
 
-      <h2>12. Contact Us</h2>
+      <h2>14. Contact Us</h2>
       <p>If you have questions or concerns about this Privacy Policy or your data:</p>
       <p>
         Email: <a href="mailto:josephtoland@teknicalsolutionz.com">josephtoland@teknicalsolutionz.com</a><br />
