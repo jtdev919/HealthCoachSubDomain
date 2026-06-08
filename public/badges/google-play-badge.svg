@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <rect width="200" height="60" rx="8" fill="#000"/>
+  <rect x="1" y="1" width="198" height="58" rx="7" fill="none" stroke="#a6a6a6" stroke-width="1"/>
+  <text x="68" y="18" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="9" letter-spacing=".5">GET IT ON</text>
+  <text x="68" y="40" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400">Google Play</text>
+  <!-- Play triangle icon -->
+  <defs>
+    <linearGradient id="bl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00c3ff"/>
+      <stop offset="1" stop-color="#1be886"/>
+    </linearGradient>
+    <linearGradient id="tl" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00c3ff"/>
+      <stop offset="1" stop-color="#5bfb9c"/>
+    </linearGradient>
+    <linearGradient id="br" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3a44"/>
+      <stop offset="1" stop-color="#c31162"/>
+    </linearGradient>
+    <linearGradient id="tr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#32a071"/>
+      <stop offset="1" stop-color="#2dd47b"/>
+    </linearGradient>
+    <linearGradient id="yr" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffce00"/>
+      <stop offset="1" stop-color="#ffba00"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(18,10)">
+    <!-- Blue/teal left half -->
+    <path d="M2.6 1.8C2.2 2.2 2 2.9 2 3.7v32.6c0 .8.2 1.5.6 1.9L2.8 38.4 20 21.2v-.4L2.8 3.6z" fill="url(#tl)"/>
+    <!-- Yellow right point -->
+    <path d="M25.7 27l-5.7-5.8v-.4l5.7-5.7.1.1 6.8 3.9c1.9 1.1 1.9 2.9 0 4l-6.8 3.8z" fill="url(#yr)"/>
+    <!-- Red bottom-right -->
+    <path d="M25.9 26.8L20 21 2.6 38.2c.6.7 1.7.8 2.9.1l20.4-11.5" fill="url(#br)"/>
+    <!-- Green top-right -->
+    <path d="M25.9 15.2L5.5 3.7C4.3 3 3.2 3.1 2.6 3.8L20 21z" fill="url(#tr)"/>
+  </g>
+</svg>

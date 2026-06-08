@@ -147,6 +147,24 @@ a:hover{ text-decoration: underline; }
   border-radius: 16px;
 }
 
+.store-badges{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+.store-badges a{ display: inline-block; transition: opacity .2s; }
+.store-badges a:hover{ opacity: .8; }
+.store-badges svg{ display: block; height: 60px; width: auto; }
+.store-badge-ios{ text-align: center; }
+.store-badge-note{
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
 .hero{
   padding: 68px 0 24px;
 }
