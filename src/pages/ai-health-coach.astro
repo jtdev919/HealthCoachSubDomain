@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const title = 'AI Health Coach App | Teknical Solutionz';
-const description = 'AI Health Coach App—wearable integrations, unified health data, and AI-suggested workout plans with ongoing analysis.';
+const description = 'The most comprehensive AI-powered health app. Connects wearables, labs, nutrition, workouts, and supplements — then uses AI to tell you what to do next.';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -12,17 +12,18 @@ const description = 'AI Health Coach App—wearable integrations, unified health
         <div>
           <h1 style="margin:0 0 10px; font-size: 44px;">AI Health Coach App</h1>
           <p class="sub">
-            AI Health Coach App is a modern mobile application designed to unify health and fitness data from wearables,
-            manual tracking, and cloud services into a single experience. The app brings workouts, sleep, biometrics, and
-            nutrition signals together in one place, then applies AI-driven analysis to generate personalized insights
-            and suggested workout plans—helping users train smarter, recover better, and stay consistent.
+            The most comprehensive AI-powered health and fitness app. Connects your wearables, lab results, nutrition,
+            workouts, and supplements into a single unified dashboard — then uses AI trained on YOUR data to generate
+            personalized meal plans, workout programs, recovery insights, and health recommendations.
           </p>
 
           <div class="pills">
             <span class="pill">iOS / Android</span>
-            <span class="pill">Wearables</span>
-            <span class="pill">All data in one place</span>
-            <span class="pill">AI insights</span>
+            <span class="pill">5 Wearable Platforms</span>
+            <span class="pill">70+ Biomarkers</span>
+            <span class="pill">AI Coaching</span>
+            <span class="pill">Meal Planning</span>
+            <span class="pill">Workout Logger</span>
           </div>
 
           <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
@@ -32,37 +33,158 @@ const description = 'AI Health Coach App—wearable integrations, unified health
 
           <div class="hr"></div>
 
-          <h2 style="margin: 0 0 10px;">What it does</h2>
+          <h2 style="margin: 0 0 16px;">Core Features</h2>
+
           <div class="grid">
             <div class="feature">
-              <h3>Wearable integrations</h3>
+              <h3>Wearable Integrations</h3>
               <p>
-                Connect popular fitness trackers and health platforms to automatically ingest activity, sleep,
-                and biometric data.
+                Connect Oura Ring, Garmin, Apple Watch, WHOOP, and Google Health Connect. Sleep stages, HRV, resting heart rate,
+                body temperature, SpO2, steps, and recovery — all synced automatically.
               </p>
             </div>
 
             <div class="feature">
-              <h3>All your data in one place</h3>
+              <h3>Smart Recovery Score</h3>
               <p>
-                Unify workouts, nutrition, body metrics, and wearable data into a single, coherent health timeline.
+                A single 0–100 score combining HRV, sleep quality, training load, resting heart rate, and subjective wellbeing.
+                Know when to push hard and when to recover — plus next-day readiness predictions.
               </p>
             </div>
 
             <div class="feature">
-              <h3>AI-suggested workout plans</h3>
+              <h3>Lab Results & 70+ Biomarkers</h3>
               <p>
-                Generate adaptive workout plans based on goals, recent performance, recovery signals, and consistency.
+                Upload lab PDFs or enter manually. AI extracts biomarkers and compares against both clinical reference ranges
+                and longevity-optimal ranges. Track trends across test dates with visual category breakdowns.
               </p>
             </div>
 
             <div class="feature">
-              <h3>Ongoing analysis & insights</h3>
+              <h3>AI Meal Plans & Nutrition</h3>
               <p>
-                AI-driven analysis highlights trends, strengths, and areas for improvement over time—without overwhelming the user.
+                GPT-4o generates personalized 7-day meal plans based on your goals, lab results, glucose data, and
+                gut microbiome profile. Log meals via barcode scan, food search, or manual entry. Full macro tracking.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Workout Logger & Training Plans</h3>
+              <p>
+                AI-generated periodized training programs with progressive overload. Log sets, reps, and weight
+                with animated exercise demos, rest timers, and RPE tracking. e1RM and personal record tracking built in.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Ask AI — Your Personal Health Coach</h3>
+              <p>
+                Ask any health question and get answers grounded in YOUR data — wearable trends, lab values, supplements,
+                medical conditions, and genetic profile. No generic advice — every response references your specific numbers.
               </p>
             </div>
           </div>
+
+          <div class="hr"></div>
+
+          <h2 style="margin: 0 0 16px;">Advanced Capabilities</h2>
+
+          <div class="grid">
+            <div class="feature">
+              <h3>Supplement Intelligence</h3>
+              <p>
+                Track your supplement stack with evidence-tier badges, optimal timing guidance, and interaction checking.
+                Barcode scanning for easy entry. AI-generated supplement protocols based on your biomarkers.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Viome Gut Microbiome Integration</h3>
+              <p>
+                Upload your Viome Gut Intelligence Test PDF. The app classifies foods as Superfood, Enjoy, Minimize, or Avoid
+                based on your microbiome — then integrates these into AI meal plans and food logging.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>CGM & Glucose Intelligence</h3>
+              <p>
+                Track daily glucose averages, variability, time-in-range, and post-meal spikes. Personal food-glucose
+                impact profiles learn which foods spike YOUR blood sugar and factor into meal planning.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Recipe Library & Import</h3>
+              <p>
+                AI generates recipes with per-ingredient macros and DALL-E food photography. Import recipes from any URL
+                (HelloFresh, AllRecipes, etc.). Recipes appear in food search for easy meal logging.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>N=1 Protocol Experiments</h3>
+              <p>
+                Design self-experiments (supplements, lifestyle changes, training protocols) with baseline snapshots and
+                outcome tracking. AI-generated analysis reports with statistical evaluation of your results.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Biological Age Tracking</h3>
+              <p>
+                Computed biological age from HRV, resting heart rate, sleep, VO2max, and lab markers. Import epigenetic clock
+                results from TruAge, GrimAge, Horvath, and DunedinPACE. Track your aging rate over time.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Clinician Reports</h3>
+              <p>
+                Generate comprehensive PDF reports for your doctor: labs, wearable trends, supplements, medical conditions,
+                AI-generated clinical narrative. Share your complete health picture in one document.
+              </p>
+            </div>
+
+            <div class="feature">
+              <h3>Lifestyle Tracking</h3>
+              <p>
+                Custom habit tracker with streaks and biometric correlation. Alcohol logging with next-day impact analysis.
+                Intermittent fasting timer with stage markers. Sauna and cold exposure tracking.
+              </p>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <h2 style="margin: 0 0 16px;">Data You Connect</h2>
+          <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="feature">
+              <h3>Wearables</h3>
+              <p>Oura · Garmin · Apple Watch · WHOOP · Health Connect</p>
+            </div>
+            <div class="feature">
+              <h3>Labs</h3>
+              <p>PDF upload · manual entry · 70+ biomarkers · AI extraction</p>
+            </div>
+            <div class="feature">
+              <h3>Nutrition</h3>
+              <p>Food logging · barcode scan · meal plans · Viome · recipes</p>
+            </div>
+            <div class="feature">
+              <h3>CGM</h3>
+              <p>Glucose averages · time-in-range · food impact profiles</p>
+            </div>
+            <div class="feature">
+              <h3>Genetics</h3>
+              <p>DNA report upload · InsideTracker · Promethease · 23andMe</p>
+            </div>
+            <div class="feature">
+              <h3>Body Comp</h3>
+              <p>DEXA scans · body fat % · lean mass · blood pressure</p>
+            </div>
+          </div>
+
         </div>
 
         <div class="card pad">
@@ -70,7 +192,7 @@ const description = 'AI Health Coach App—wearable integrations, unified health
             <img src="/ai-health-coach-logo.png" alt="AI Health Coach App logo" style="width:72px; height:72px; border-radius:18px; border:1px solid rgba(255,255,255,0.14);" />
             <div>
               <div style="font-weight:900; font-size:16px;">AI Health Coach App</div>
-              <div class="small">Mobile product • Built by Teknical Solutionz</div>
+              <div class="small">Health & Fitness · Free · iOS & Android</div>
             </div>
           </div>
 
@@ -78,23 +200,27 @@ const description = 'AI Health Coach App—wearable integrations, unified health
 
           <div class="grid">
             <div class="feature">
-              <h3>Built for real-world delivery</h3>
-              <p>Clean architecture, secure data handling, and integration patterns that scale.</p>
+              <h3>Privacy First</h3>
+              <p>AES-256 encryption for all health data. Azure Key Vault. Complete audit trail. No data sold. Ever.</p>
             </div>
             <div class="feature">
-              <h3>Designed for iteration</h3>
-              <p>Built to evolve: new data sources, coaching logic, and features can expand safely.</p>
+              <h3>AI That Knows You</h3>
+              <p>Every AI response is grounded in YOUR data — not generic advice. Labs, wearables, supplements, and goals all inform recommendations.</p>
             </div>
           </div>
 
           <div class="hr"></div>
 
-          <p class="small" style="margin:0;">
-            Want a similar mobile product built? We can help with architecture, delivery, and app store readiness.
-          </p>
-          <div style="margin-top: 12px;">
-            <a class="btn primary" href="/contact">Talk to us</a>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://apps.apple.com/us/app/ai-health-coach-app/id6758858875" target="_blank" rel="noopener">Download for iOS</a>
+            <a class="btn" href="https://play.google.com/store/apps/details?id=com.teknicalsolutionz.HealthCoachApp" target="_blank" rel="noopener">Download for Android</a>
           </div>
+
+          <div class="hr"></div>
+
+          <p class="small" style="margin:0;">
+            Built by <a href="/about">Teknical Solutionz LLC</a>. Questions? <a href="/contact">Contact us</a>.
+          </p>
         </div>
       </div>
     </div>

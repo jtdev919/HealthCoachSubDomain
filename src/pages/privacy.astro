@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: May 20, 2026</p>
+      <p class="muted">Last Updated: July 8, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -52,7 +52,16 @@ const title = 'Privacy Policy';
         <li>Lab test results uploaded manually or extracted from PDF documents via AI processing</li>
         <li>Biomarker values, units, test dates, and reference ranges</li>
         <li>Supplement and medication names, dosages, and schedules</li>
+        <li>Genetic profile data from DNA report PDFs (interpreted phenotype summaries only — raw SNP data is never stored)</li>
       </ul>
+
+      <h3>1.3.1 Viome Gut Microbiome Data</h3>
+      <p>With your explicit action (PDF upload), we extract food classification data from Viome Gut Intelligence Test reports:</p>
+      <ul>
+        <li>Food recommendations classified as Superfood, Enjoy, Minimize, or Avoid</li>
+        <li>Food category and serving size information</li>
+      </ul>
+      <p>This data is used solely to personalize meal planning and provide food-specific guidance within the App. Viome data is encrypted at rest.</p>
 
       <h3>1.4 Apple HealthKit Data</h3>
       <p>With your explicit permission, HealthCoach reads the following data from Apple HealthKit:</p>
@@ -174,7 +183,10 @@ const title = 'Privacy Policy';
         <li><strong>Azure Key Vault</strong> (encryption key management)</li>
         <li><strong>OpenAI GPT-4o</strong> — AI-powered health plan generation, lab document parsing, and wellness insights. Your health data is routed through our Azure backend before being sent to OpenAI's API for processing. Only anonymized health context is sent — never your name, email, or account identifiers. Data is not retained by OpenAI for model training per our data processing agreement.</li>
         <li><strong>Application Insights</strong> (anonymized crash reporting and performance monitoring)</li>
-        <li><strong>Open Food Facts</strong> (supplement barcode lookup — public database, no personal data sent)</li>
+        <li><strong>Open Food Facts</strong> (food and supplement barcode lookup — public database, no personal data sent)</li>
+        <li><strong>Nutritionix</strong> (food nutrition database lookup — food search queries only, no personal data sent)</li>
+        <li><strong>Kroger API</strong> (grocery ordering — with your authorization via OAuth, product searches and cart management for meal plan grocery lists)</li>
+        <li><strong>OpenAI gpt-image-1</strong> (recipe image generation — only recipe titles are sent, no personal data)</li>
       </ul>
       <p>
         We do not share your personally identifiable health data with any third-party service for purposes other than
