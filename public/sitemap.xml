@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://teknicalsolutionz.com/</loc></url>
-  <url><loc>https://teknicalsolutionz.com/services</loc></url>
-  <url><loc>https://teknicalsolutionz.com/about</loc></url>
-  <url><loc>https://teknicalsolutionz.com/work</loc></url>
-  <url><loc>https://teknicalsolutionz.com/ai-health-coach</loc></url>
-  <url><loc>https://teknicalsolutionz.com/contact</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/garmin</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/whoop</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/privacy</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/terms</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/data-deletion</loc></url>
+  <url><loc>https://healthcoach.teknicalsolutionz.com/contact</loc></url>
 </urlset>
