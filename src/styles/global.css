@@ -440,6 +440,9 @@ textarea.input{ resize: vertical; }
 .screenshot-row:has(.phone-pair){
   grid-template-columns: 1fr 440px;
 }
+.screenshot-row-reverse:has(.phone-pair){
+  grid-template-columns: 440px 1fr;
+}
 @media (max-width: 900px){
   .screenshot-row,
   .screenshot-row-reverse{
