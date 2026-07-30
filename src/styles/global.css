@@ -429,6 +429,17 @@ textarea.input{ resize: vertical; }
   display: flex;
   justify-content: center;
 }
+.phone-pair{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.phone-pair .phone-frame{
+  max-width: 200px;
+}
+.screenshot-row:has(.phone-pair){
+  grid-template-columns: 1fr 440px;
+}
 @media (max-width: 900px){
   .screenshot-row,
   .screenshot-row-reverse{
@@ -442,6 +453,9 @@ textarea.input{ resize: vertical; }
   }
   .phone-frame{
     max-width: 240px;
+  }
+  .phone-pair .phone-frame{
+    max-width: 160px;
   }
 }
 
