@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/.well-known/jwks.json",
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "public, max-age=3600"
+      }
+    }
+  ],
+  "mimeTypes": {
+    ".json": "application/json"
+  }
+}
