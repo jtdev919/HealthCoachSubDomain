@@ -6,6 +6,13 @@
         "content-type": "application/json",
         "cache-control": "public, max-age=3600"
       }
+    },
+    {
+      "route": "/.well-known/jwks-sandbox.json",
+      "headers": {
+        "content-type": "application/json",
+        "cache-control": "public, max-age=3600"
+      }
     }
   ],
   "mimeTypes": {

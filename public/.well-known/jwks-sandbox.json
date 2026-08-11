@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS384",
+      "kid": "healthcoach-epic-sandbox-1",
+      "n": "ukRVArITaeUxaLFvRMptkQuC4mV9xjTOhTZVi9EUJvwZfEsmNl3YSqcC9YNOhqxuYU-1SIXmJ0pX79XkHuBhMTfx4SjQ-pbiHPaOcvtVxMfr3xbwxuT4123RBr9Fi2TyR6dkZCQLhBzX4e7Kbgj2Lx5xtpzXw3JQSHSN_sp741Lb9RtLUcwIgtFKrawRLW7BuXVwn5m8nDccQ_1ab1JaXYwf3G97PkxERuXNhpCpRdw70XRQrKY8bLvlzz4W4g4i_0w6hESkN9bQ81mlWYWiOLLRPxVIzaPEdEEQvjJO2jAr6_ecA_j1fH42SVJkUaZBRD05mmjkJ1xLGTCLszeDTN5zmzaQNgaWh3diXN4KwAPWwP2p4Qd76DA5OpsheDz0GYwz2U1fB_ynn5GTbXYFgfx1bs1z6VKjLkysGrBUc-a7n8cewRz-amgK7Cl12sP5ErzkMabry3M_jA4Tts-ahFakGxHNmtCbehDR-l_wWIsVlEwqoq29XO6RovUu9_Gl",
+      "e": "AQAB"
+    }
+  ]
+}
