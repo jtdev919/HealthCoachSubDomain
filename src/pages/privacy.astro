@@ -113,6 +113,32 @@ const title = 'Privacy Policy';
         transmitted to our servers.
       </p>
 
+      <h3>1.8 Health Records from Your Healthcare Provider</h3>
+      <p>
+        If you choose to connect a patient portal account — such as Epic MyChart — HealthCoach imports clinical records
+        directly from your healthcare provider. This connection is optional, is started only by you, and can be
+        disconnected at any time from the Settings screen.
+      </p>
+      <p>When connected, we import and store:</p>
+      <ul>
+        <li>Laboratory results — test names, values, units, reference ranges, and dates</li>
+        <li>Medications — name, dose, frequency, prescribing dates, and whether the prescription is active</li>
+        <li>Medical conditions and allergies, including their clinical and verification status</li>
+        <li>Immunization records</li>
+        <li>The health system you selected and your patient identifier at that organization</li>
+        <li>Authorization tokens for the connection, so records can be refreshed without repeated sign-in</li>
+      </ul>
+      <p>
+        All imported clinical data and authorization tokens are encrypted at rest. We request read-only access — we never
+        write to, alter, or delete anything in your medical record, and we cannot act on your behalf with your provider.
+      </p>
+      <p>
+        You can remove imported records at any time without disconnecting, and disconnecting asks whether you want them
+        removed as well. Because records belonging to two different patients must never be combined in one account,
+        HealthCoach supports one connected health system at a time — connecting a different patient's chart requires
+        removing the previously imported records first.
+      </p>
+
       <h2>2. How We Use Your Information</h2>
       <p>We use your information exclusively to:</p>
       <ul>
@@ -187,6 +213,8 @@ const title = 'Privacy Policy';
         <li><strong>Nutritionix</strong> (food nutrition database lookup — food search queries only, no personal data sent)</li>
         <li><strong>Kroger API</strong> (grocery ordering — with your authorization via OAuth, product searches and cart management for meal plan grocery lists)</li>
         <li><strong>OpenAI gpt-image-1</strong> (recipe image generation — only recipe titles are sent, no personal data)</li>
+        <li><strong>Epic on FHIR</strong> (health record import from Epic MyChart — only if you connect a patient portal account. We send authorization tokens and your patient identifier to your health system in order to read your records; we request read-only access and send none of your HealthCoach data to them.)</li>
+        <li><strong>Veradigm FollowMyHealth</strong> (health record import from the FollowMyHealth patient portal, on the same read-only basis — not currently enabled)</li>
       </ul>
       <p>
         We do not share your personally identifiable health data with any third-party service for purposes other than
