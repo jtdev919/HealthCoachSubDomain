@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// ---------------------------------------------------------------------------
+// The YouTube video ID for the product demo.
+//
+// The app links to /demo rather than straight to YouTube, so the video can be
+// re-recorded, replaced, or moved to another host by editing this one line.
+// Pointing the app at a YouTube URL directly would make swapping the video an
+// App Store submission.
+//
+// Set this to the ID only — the part after `v=` in the watch URL.
+// Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  'dQw4w9WgXcQ'
+// ---------------------------------------------------------------------------
+const YOUTUBE_VIDEO_ID = '385-z2bLsMs';
+
+const watchUrl = YOUTUBE_VIDEO_ID
+  ? `https://www.youtube.com/watch?v=${YOUTUBE_VIDEO_ID}`
+  : null;
+
+const title = 'Watch the Demo | AI Health Coach App';
+const description = 'A full walkthrough of AI Health Coach App: setup, syncing your wearables and labs, and reading your first plan.';
+---
+
+<BaseLayout title={title} description={description}>
+  {/* BaseLayout has no named head slot, so this redirects from the body rather than via
+      <meta http-equiv="refresh">. The embed and link below are the no-JS fallback. */}
+  {watchUrl && <script is:inline set:html={`window.location.replace(${JSON.stringify(watchUrl)});`} />}
+
+  <section class="section">
+    <div class="container">
+      <h1>Watch the demo</h1>
+
+      {watchUrl ? (
+        <>
+          <p class="sub">
+            Taking you to the video now. If nothing happens,
+            <a href={watchUrl} rel="noopener">open it on YouTube</a>.
+          </p>
+
+          <div class="card pad">
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${YOUTUBE_VIDEO_ID}`}
+                title="AI Health Coach App demo"
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <p class="sub">
+            The walkthrough is being recorded and will be posted here shortly. In the meantime, the
+            app guides you through setup step by step the first time you open it.
+          </p>
+
+          <div class="card pad">
+            <h2 style="margin-top:0;">What the demo will cover</h2>
+            <ul>
+              <li>Setting up your health profile</li>
+              <li>Connecting a wearable and importing your medical records</li>
+              <li>Adding lab results and reading what they mean</li>
+              <li>Daily check-ins, food and workout logging</li>
+              <li>Generating your first AI health plan</li>
+            </ul>
+            <p style="margin-bottom:0;">
+              <a href="/">Back to the home page</a>
+            </p>
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+</BaseLayout>
