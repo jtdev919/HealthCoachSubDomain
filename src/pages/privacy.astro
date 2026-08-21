@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: July 8, 2026</p>
+      <p class="muted">Last Updated: August 21, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -45,11 +45,18 @@ const title = 'Privacy Policy';
         <li>Body composition data (DEXA scans)</li>
         <li>Fasting session records</li>
         <li>Thermal exposure sessions (sauna and cold exposure)</li>
+        <li>Alcohol consumption records</li>
+        <li>Habit completion records</li>
+        <li>
+          Health events you choose to log, such as a blood donation, vaccination, surgery, medication change, injury,
+          or change in diet. These include the event type, date, and an optional title and notes, which are encrypted
+          at rest. We use them to explain expected movement in your biomarkers over time.
+        </li>
       </ul>
 
       <h3>1.3 Lab Results and Biomarkers</h3>
       <ul>
-        <li>Lab test results uploaded manually or extracted from PDF documents via AI processing</li>
+        <li>Lab test results uploaded manually or extracted from PDF documents via AI processing. The uploaded document file itself is retained in our encrypted Azure Blob Storage so you can revisit the source of a result, and is deleted when you delete the document or your account.</li>
         <li>Biomarker values, units, test dates, and reference ranges</li>
         <li>Supplement and medication names, dosages, and schedules</li>
         <li>Genetic profile data from DNA report PDFs (interpreted phenotype summaries only — raw SNP data is never stored)</li>
@@ -62,6 +69,20 @@ const title = 'Privacy Policy';
         <li>Food category and serving size information</li>
       </ul>
       <p>This data is used solely to personalize meal planning and provide food-specific guidance within the App. Viome data is encrypted at rest.</p>
+
+      <h3>1.3.2 Food Reactions and Sensitivity Profile</h3>
+      <p>If you record a reaction to something you ate, we collect:</p>
+      <ul>
+        <li>The food the reaction is linked to</li>
+        <li>The symptoms you report (bloating, gas, nausea, fatigue, brain fog, skin reaction, headache, cramping, heartburn, diarrhea, or constipation)</li>
+        <li>A severity rating from 1 to 5</li>
+      </ul>
+      <p>
+        Once you have logged enough reactions, we send the reaction history for AI analysis to identify candidate trigger
+        ingredients, and we store the resulting sensitivity profile on your account. That profile is used to personalize
+        meal planning and to flag foods when you log them. It is not a diagnosis and is not a substitute for allergy
+        testing or medical advice.
+      </p>
 
       <h3>1.4 Apple HealthKit Data</h3>
       <p>With your explicit permission, HealthCoach reads the following data from Apple HealthKit:</p>
@@ -106,11 +127,44 @@ const title = 'Privacy Policy';
         <li>Device type, operating system version, and app version</li>
       </ul>
 
-      <h3>1.7 Camera</h3>
+      <h3>1.7 Camera and Photos</h3>
       <p>
-        HealthCoach uses your device camera solely to scan barcodes and QR codes on supplement and food packaging. Images
-        captured during scanning are processed locally on your device in real-time and are never stored, uploaded, or
-        transmitted to our servers.
+        HealthCoach uses your device camera and photo library in four distinct ways. They are handled differently, so we
+        describe each separately.
+      </p>
+
+      <h4>Barcode and QR scanning</h4>
+      <p>
+        When you scan a barcode on supplement or food packaging, the camera frames are processed locally on your device in
+        real time. No image is stored, uploaded, or transmitted to our servers. Only the decoded barcode number is sent, so
+        that we can look up the product.
+      </p>
+
+      <h4>Food and nutrition label photos</h4>
+      <p>
+        If you photograph a meal or a nutrition label to estimate its contents, the image <strong>is</strong> transmitted to
+        our Azure backend and forwarded to our AI vision provider for analysis. This is the only way the estimate can be
+        produced. The image is held in memory for the duration of the analysis and is <strong>not</strong> written to our
+        database or to file storage, and it is not retained by the AI provider for model training. What we keep is the
+        resulting nutrition estimate, if you choose to save it as a food entry, and an audit record noting that an analysis
+        took place. Please avoid capturing faces, documents, or other people in these photos, since the image is sent off
+        your device.
+      </p>
+
+      <h4>Progress photos</h4>
+      <p>
+        Progress photos you take or select remain <strong>on your device only</strong>. They are stored in the App's private
+        storage area, are never uploaded to our servers or to any third party, and are not included in AI analysis. Deleting
+        a progress photo in the App removes it from your device. Because these photos are not on our servers, they are not
+        part of a server-side data export and are removed when you uninstall the App.
+      </p>
+
+      <h4>Screenshots you attach to feedback</h4>
+      <p>
+        If you submit feedback or a bug report, you may optionally attach up to three images. These are uploaded to and
+        stored in our Azure Blob Storage so that we can investigate the issue you reported. Attaching an image is entirely
+        optional, and you choose which images to attach. Please avoid attaching screenshots containing health information
+        you would rather not share with us.
       </p>
 
       <h3>1.8 Health Records from Your Healthcare Provider</h3>
@@ -139,6 +193,29 @@ const title = 'Privacy Policy';
         removing the previously imported records first.
       </p>
 
+      <h3>1.9 Community Profile and Posts</h3>
+      <p>
+        HealthCoach includes an optional Community area. You are not required to use it, and no community profile exists
+        until you create one.
+      </p>
+      <p>If you set up a community profile and post, we collect and store:</p>
+      <ul>
+        <li>The display name and avatar image you choose, which do not have to be your real name or likeness</li>
+        <li>Whether you have marked your profile as public</li>
+        <li>The title and body of any post you publish, and any health metric you deliberately attach to it</li>
+        <li>Comments you write, and the posts you like</li>
+        <li>Any report you submit about another member's post, including the reason and your notes</li>
+      </ul>
+      <p>
+        <strong>Anything you publish in Community is visible to other HealthCoach users.</strong> Health information you
+        attach to a post becomes visible to them as well, so please share only what you are comfortable making public. We do
+        not publish any of your health data to Community automatically; a post is created only when you choose to create it.
+      </p>
+      <p>
+        You can delete your posts and comments, and deleting your account removes your community profile and content. Copies
+        that other users have already seen, quoted, or screenshotted are outside our control.
+      </p>
+
       <h2>2. How We Use Your Information</h2>
       <p>We use your information exclusively to:</p>
       <ul>
@@ -147,6 +224,9 @@ const title = 'Privacy Policy';
         <li>Analyze trends in your health metrics over time</li>
         <li>Calculate correlations between your behaviors and health outcomes (N=1 analytics)</li>
         <li>Extract biomarkers from uploaded lab documents</li>
+        <li>Estimate nutrition content from photos of meals and nutrition labels that you choose to capture</li>
+        <li>Identify candidate trigger ingredients from food reactions you have logged</li>
+        <li>Publish the community posts and comments you choose to share with other users</li>
         <li>Generate weekly health summaries and coaching recommendations</li>
         <li>Track supplement protocols and provide progress reports</li>
         <li>Estimate biological age and longevity metrics</li>
@@ -209,9 +289,11 @@ const title = 'Privacy Policy';
         <li><strong>Azure Key Vault</strong> (encryption key management)</li>
         <li><strong>OpenAI GPT-4o</strong> — AI-powered health plan generation, lab document parsing, and wellness insights. Your health data is routed through our Azure backend before being sent to OpenAI's API for processing. Only anonymized health context is sent — never your name, email, or account identifiers. Data is not retained by OpenAI for model training per our data processing agreement.</li>
         <li><strong>Application Insights</strong> (anonymized crash reporting and performance monitoring)</li>
+        <li><strong>Azure Blob Storage</strong> (encrypted storage for uploaded lab documents, feedback screenshots, generated recipe images, and exported workout files)</li>
         <li><strong>Open Food Facts</strong> (food and supplement barcode lookup — public database, no personal data sent)</li>
         <li><strong>Nutritionix</strong> (food nutrition database lookup — food search queries only, no personal data sent)</li>
         <li><strong>Kroger API</strong> (grocery ordering — with your authorization via OAuth, product searches and cart management for meal plan grocery lists)</li>
+        <li><strong>Instacart</strong> (grocery ordering — when you choose to send a grocery list, the item names from that list are sent to Instacart to build a shopping list. No health data, lab results, or account identifiers are sent.)</li>
         <li><strong>OpenAI gpt-image-1</strong> (recipe image generation — only recipe titles are sent, no personal data)</li>
         <li><strong>Epic on FHIR</strong> (health record import from Epic MyChart — only if you connect a patient portal account. We send authorization tokens and your patient identifier to your health system in order to read your records; we request read-only access and send none of your HealthCoach data to them.)</li>
         <li><strong>Veradigm FollowMyHealth</strong> (health record import from the FollowMyHealth patient portal, on the same read-only basis — not currently enabled)</li>
@@ -234,6 +316,12 @@ const title = 'Privacy Policy';
         OpenAI. This data is processed in real-time and is not retained by OpenAI for model training purposes per our data
         processing agreement.
       </p>
+      <p>
+        Two AI tasks involve images rather than text. Lab documents you upload are parsed to extract biomarker values, and
+        photos of meals or nutrition labels are analyzed to estimate nutrition content. In both cases the image is sent from
+        our backend to the AI provider, processed in real time, and not stored by us or retained by the provider for model
+        training. Progress photos are never sent for AI analysis.
+      </p>
 
       <h2>9. Your Rights and Choices</h2>
       <p>You have the right to:</p>
@@ -245,6 +333,8 @@ const title = 'Privacy Policy';
         <li>Disconnect any wearable device integration at any time</li>
         <li>Opt out of optional notifications</li>
         <li>Export your health data (clinician reports, protocol reports)</li>
+        <li>Delete your community profile, posts, and comments, or decline to use Community at all</li>
+        <li>Disconnect a health system and remove imported clinical records at any time</li>
       </ul>
       <p>To exercise any of these rights, contact us at the email address below.</p>
 
