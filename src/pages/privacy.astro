@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: September 11, 2026</p>
+      <p class="muted">Last Updated: September 16, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -156,7 +156,7 @@ const title = 'Privacy Policy';
 
       <h3>1.8 Camera and Photos</h3>
       <p>
-        HealthCoach uses your device camera and photo library in four distinct ways. They are handled differently, so we
+        HealthCoach uses your device camera and photo library in five distinct ways. They are handled differently, so we
         describe each separately.
       </p>
 
@@ -176,6 +176,27 @@ const title = 'Privacy Policy';
         resulting nutrition estimate, if you choose to save it as a food entry, and an audit record noting that an analysis
         took place. Please avoid capturing faces, documents, or other people in these photos, since the image is sent off
         your device.
+      </p>
+
+      <h4>Photos you attach to an AI question</h4>
+      <p>
+        When you ask a health question, you may optionally attach one photo. Unlike a food photo, you
+        choose what it shows, so it may contain a skin condition, a medication, a device reading, or a
+        printed document. The image <strong>is</strong> transmitted to our Azure backend and forwarded
+        to our AI vision provider so that your question can be answered about it.
+      </p>
+      <p>
+        The image is held in memory for the duration of that single question and is <strong>not</strong>
+        written to our database or to file storage, is not attached to the saved conversation, and is
+        not included in our request logs. It is not retained by the AI provider for model training. A
+        past conversation reopened from your history therefore shows the question and the answer with
+        no image, which is intended rather than a fault. What we keep is the question, the answer, and
+        an audit record noting that an analysis took place.
+      </p>
+      <p>
+        Attaching a photo is entirely optional and every question can be asked without one. Because the
+        image leaves your device, please avoid including other people, faces you did not intend to
+        share, or documents containing information about anyone but yourself.
       </p>
 
       <h4>Progress photos</h4>
