@@ -10,6 +10,21 @@ const {
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
+
+/*
+  Analytics.
+
+  This slot previously held a <script src> pointing at
+  costmgmt-web.<...>.eastus.azurecontainerapps.io, the cost-management container app. That host
+  no longer resolves (DNS NXDOMAIN, verified 2026-10-09), so every page load has been requesting
+  a script from a deleted resource and recording nothing. The tag being present is precisely why
+  nobody noticed: the layout read as instrumented.
+
+  It is now gated on an env var. Set PUBLIC_PLAUSIBLE_DOMAIN in the Static Web App configuration
+  once the Plausible (or Fathom) account exists; until then no analytics script is emitted at all,
+  which is at least honest about the fact that nothing is being measured.
+*/
+const analyticsDomain = import.meta.env.PUBLIC_PLAUSIBLE_DOMAIN;
 ---
 
 <!doctype html>
@@ -38,7 +53,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <script src="https://costmgmt-web.delightfulwave-066acf39.eastus.azurecontainerapps.io/tracking/tracker.js" defer></script>
+    {analyticsDomain && (
+      <script
+        is:inline
+        defer
+        data-domain={analyticsDomain}
+        src="https://plausible.io/js/script.outbound-links.js"
+      ></script>
+    )}
   </head>
   <body>
     <div class="nav">
