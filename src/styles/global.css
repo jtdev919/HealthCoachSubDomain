@@ -540,3 +540,208 @@ textarea.input{ resize: vertical; }
   font-size: 16px;
   line-height: 1.65;
 }
+
+/* ============================================================
+   Blog (ROADMAP-5 #198)
+   Article typography. These live in global.css rather than in a
+   scoped <style> because Astro's scoped styles do not reach the
+   HTML produced by <Content />, which is rendered from markdown.
+   ============================================================ */
+
+.blog-title{
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 14px 0 12px;
+  text-wrap: balance;
+}
+
+.blog-standfirst{
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 62ch;
+  margin: 0 0 8px;
+}
+
+/* ---- index listing ---- */
+.post-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.post-card{
+  display: block;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.post-card:hover{
+  text-decoration: none;
+  border-color: rgba(47,123,255,0.45);
+  transform: translateY(-2px);
+}
+.post-card:focus-visible{
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.post-heading{
+  margin: 10px 0 8px;
+  font-size: 24px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.post-desc{
+  margin: 0;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.post-meta{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--muted2);
+}
+
+.post-pillar{
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(47,123,255,0.40);
+  background: rgba(47,123,255,0.12);
+  color: #9cc0ff;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Only ever visible in dev; production builds exclude unpublished posts. */
+.post-draft{
+  display: inline-flex;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,196,0,0.45);
+  background: rgba(255,196,0,0.12);
+  color: #ffd46b;
+  font-weight: 600;
+}
+
+/* ---- article body ---- */
+.prose-wrap{ max-width: 760px; }
+
+.post-back{
+  display: inline-block;
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.prose{
+  font-size: 18px;
+  line-height: 1.72;
+  color: var(--text);
+}
+
+.prose > * + *{ margin-top: 1.15em; }
+
+.prose h2{
+  margin: 1.9em 0 0.1em;
+  font-size: 27px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.prose h3{
+  margin: 1.5em 0 0.1em;
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.prose p{ max-width: 68ch; }
+
+.prose strong{ color: #fff; font-weight: 650; }
+
+.prose a{
+  color: #8fb6ff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose ul, .prose ol{
+  padding-left: 1.3em;
+  max-width: 66ch;
+}
+.prose li + li{ margin-top: 0.45em; }
+
+.prose blockquote{
+  margin: 1.5em 0;
+  padding: 2px 0 2px 20px;
+  border-left: 3px solid rgba(47,123,255,0.5);
+  color: var(--muted);
+  font-style: italic;
+}
+
+.prose code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+}
+
+/* Tables carry the actual data in these articles, so they get real styling.
+   The wrapper scrolls rather than the page, so a wide table cannot force the
+   whole document sideways on a phone. */
+.prose table{
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15.5px;
+  font-variant-numeric: tabular-nums;
+}
+.prose th, .prose td{
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.prose th{
+  color: var(--muted2);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.prose tbody tr:last-child td{ border-bottom: 0; }
+
+.prose hr{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 2.2em 0;
+}
+
+.post-disclaimer{
+  margin-top: 36px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  border-left: 3px solid rgba(255,196,0,0.6);
+  background: rgba(255,255,255,0.04);
+  color: var(--muted);
+  font-size: 15px;
+}
+.post-disclaimer strong{ color: var(--text); }
+
+.post-cta{ margin-top: 28px; }
+
+@media (max-width: 640px){
+  .prose{ font-size: 17px; }
+  .prose h2{ font-size: 23px; }
+}

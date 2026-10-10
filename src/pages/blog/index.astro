@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+/*
+  Drafts are visible in `astro dev` and excluded from production builds, so an unfinished or
+  unreviewed article can be read locally without any risk of it appearing on the live site.
+  Flip `published: true` in a post's frontmatter to ship it.
+*/
+const posts = (await getCollection('blog', ({ data }) => data.published || import.meta.env.DEV))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const readingTime = (body) => Math.max(1, Math.round(body.trim().split(/\s+/).length / 225));
+
+const fmt = (d) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const title = 'Articles — AI Health Coach App';
+const description =
+  'Notes from six years of tracking my own biometrics, and what building a health app taught me about where the data goes wrong.';
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="section">
+    <div class="container">
+      <span class="kicker">Articles</span>
+      <h1 class="blog-title">What the data actually said</h1>
+      <p class="blog-standfirst">
+        Six years of my own labs, wearables and experiments, and what I got wrong building
+        software to make sense of them. Written n=1, with the caveats left in.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {posts.length === 0 ? (
+        <div class="card pad">
+          <p style="margin:0;">No articles published yet.</p>
+        </div>
+      ) : (
+        <ul class="post-list">
+          {posts.map((post) => (
+            <li>
+              <a class="card pad post-card" href={`/blog/${post.slug}/`}>
+                <div class="post-meta">
+                  <span class="post-pillar">{post.data.pillar}</span>
+                  <span>{fmt(post.data.pubDate)}</span>
+                  <span>{readingTime(post.body)} min read</span>
+                  {!post.data.published && <span class="post-draft">Draft</span>}
+                </div>
+                <h2 class="post-heading">{post.data.title}</h2>
+                <p class="post-desc">{post.data.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </section>
+</BaseLayout>

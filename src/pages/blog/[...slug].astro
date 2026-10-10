@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  // Same filter as the index: drafts build in dev, never in production.
+  const posts = await getCollection('blog', ({ data }) => data.published || import.meta.env.DEV);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const fmt = (d) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const readingTime = Math.max(1, Math.round(post.body.trim().split(/\s+/).length / 225));
+---
+
+<BaseLayout title={`${post.data.title} — AI Health Coach App`} description={post.data.description}>
+  <article class="section">
+    <div class="container prose-wrap">
+      <a class="post-back" href="/blog/">&larr; All articles</a>
+
+      <div class="post-meta">
+        <span class="post-pillar">{post.data.pillar}</span>
+        <span>{fmt(post.data.pubDate)}</span>
+        <span>{readingTime} min read</span>
+        {!post.data.published && <span class="post-draft">Draft</span>}
+      </div>
+
+      <h1 class="blog-title">{post.data.title}</h1>
+      <p class="blog-standfirst">{post.data.description}</p>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      {post.data.disclaimer && (
+        <aside class="post-disclaimer">
+          <strong>This is one person's data.</strong> Everything above describes what happened to
+          me. I am not a clinician, none of it is medical advice, and n=1 means I genuinely cannot
+          tell you what will happen to you. Talk to your doctor before changing anything about
+          your care.
+        </aside>
+      )}
+
+      <div class="post-cta card pad">
+        <p style="margin:0 0 12px;">
+          I built <strong>AI Health Coach</strong> because I could not answer these questions with
+          the tools I had. It puts your wearables, labs and supplements on one timeline.
+        </p>
+        <a class="btn primary" href="/">See what it does</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
