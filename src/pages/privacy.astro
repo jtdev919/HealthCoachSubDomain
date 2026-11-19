@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: November 5, 2026</p>
+      <p class="muted">Last Updated: November 19, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -308,8 +308,8 @@ const title = 'Privacy Policy';
         <li>All data in transit is encrypted using HTTPS/TLS</li>
         <li>Sensitive health data at rest (lab results, biomarker values, goal descriptions, plan details, supplement names) is encrypted using AES-256 encryption</li>
         <li>Encryption keys are managed through Azure Key Vault, a FIPS 140-2 compliant key management service</li>
-        <li>Authentication tokens are stored in platform-secure storage (iOS Keychain, Android Keystore)</li>
-        <li>Local app data is stored in an encrypted SQLite database on your device</li>
+        <li>Authentication tokens and your profile details, including height, weight, date of birth, goals and any medical notes you enter, are stored in platform-secure storage (iOS Keychain, Android Keystore)</li>
+        <li>Information cached on your device is held in the app's private storage area, which your operating system isolates from other apps and encrypts at rest using the device's own protection (iOS Data Protection, Android File-Based Encryption). This protection depends on your device having a passcode or biometric lock, so we recommend keeping one set.</li>
         <li>We maintain a complete audit trail of all data access for security monitoring</li>
         <li>Biometric authentication (Face ID, Touch ID, or fingerprint) is handled entirely by your device's operating system. HealthCoach never accesses, processes, or stores your biometric data. We only receive a pass/fail result from the operating system.</li>
       </ul>
