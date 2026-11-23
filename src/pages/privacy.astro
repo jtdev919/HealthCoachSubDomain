@@ -8,7 +8,7 @@ const title = 'Privacy Policy';
   <section class="section">
     <div class="container">
       <h1>Privacy Policy</h1>
-      <p class="muted">Last Updated: November 19, 2026</p>
+      <p class="muted">Last Updated: November 23, 2026</p>
 
       <p>
         Teknical Solutionz LLC ("we," "us," or "our") operates the HealthCoach mobile application ("App"). This
@@ -69,7 +69,13 @@ const title = 'Privacy Policy';
           your own description. Each record holds the event type, date, and an optional title and notes, which are
           encrypted at rest. We use them to explain expected movement in your biomarkers over time; for example, a
           drop in ferritin after a blood donation, or a change in your overnight breathing numbers after you begin
-          CPAP.
+          CPAP. You can mark any event private. A private event is not shown on your biomarker charts. When the AI
+          answers a question it is given the event's type and date, so that a bereavement can explain a change in
+          your sleep or training, and it is never given the title or notes you wrote. Those are not sent to OpenAI
+          and are not decrypted for that purpose. The event is still stored, still encrypted, and still included
+          when you export your data. Bereavement, a change of job, a change in a relationship, moving home and
+          starting to care for someone are private unless you say otherwise; the rest are not. You can change this
+          for any event at any time.
         </li>
         <li>
           Food you log, including the item, its serving size, how many servings you ate, and the resulting calories
